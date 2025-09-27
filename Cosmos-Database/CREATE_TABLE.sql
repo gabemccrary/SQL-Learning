@@ -6,7 +6,7 @@ CREATE TABLE Planet (
     planetName VARCHAR(100),
     starSystem VARCHAR(100),
     inhabited BIT,
-    logDate SMALLDATETIME,
+    logDate SMALLDATETIME DEFAULT GETDATE(),
     composition VARCHAR(100)
 );
 
@@ -171,5 +171,6 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 

@@ -4,7 +4,7 @@ PLANET
 CREATE TABLE Planet (
     planetID INT PRIMARY KEY,
     planetName VARCHAR(50),
-    starSystem VARCHAR(50),
+    star VARCHAR(50),
     habitable BIT,
     logDate SMALLDATETIME DEFAULT GETDATE(),
     description VARCHAR(255)
@@ -15,8 +15,8 @@ SHIP
 **********************/
 CREATE TABLE Ship (
     shipID INT PRIMARY KEY,
-    manufacturer VARCHAR(100),
-    model VARCHAR(100),
+    manufacturer VARCHAR(50),
+    model VARCHAR(50),
     shipClass VARCHAR(10),
     capacity INT,
     startYear INT,
@@ -76,7 +76,7 @@ CREATE TABLE Address (
     addressID INT PRIMARY KEY,
     number INT,
     street NVARCHAR(50),
-    city NVARCHAR(100),
+    city NVARCHAR(50),
     state NVARCHAR(50),
     nation NVARCHAR(50),
     planet NVARCHAR(50)
@@ -129,11 +129,11 @@ CONFLICT
 CREATE TABLE Conflict (
     conflictID INT PRIMARY KEY,
     voyageID INT,
-    conflictName VARCHAR(100),
+    conflictName VARCHAR(50),
     startDate DATE,
     endDate DATE,
     description VARCHAR(255),
-    outcome VARCHAR(100),
+    outcome VARCHAR(50),
     FOREIGN KEY (voyageID) REFERENCES Voyage(voyageID)
 );
 
@@ -151,7 +151,7 @@ ROLE
 CREATE TABLE Role (
     roleID INT PRIMARY KEY,
     departmentID INT,
-    name VARCHAR(100),
+    name VARCHAR(50),
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID)
 );
 
@@ -171,6 +171,7 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 
 

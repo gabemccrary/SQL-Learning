@@ -11,17 +11,30 @@ CREATE TABLE Planet (
 );
 
 /**********************
-KINDRED
+SAPIENT TAXON
 **********************/
-CREATE TABLE Kindred (
-    kindredID INT PRIMARY KEY,
+CREATE TABLE SapientTaxon (
+    taxonID INT PRIMARY KEY,
     homePlanetID INT,
-    name VARCHAR(100),
+    Name VARCHAR(100),
     humanoid BIT,
-    sapience BIT,
     averageLifespan INT,
     description VARCHAR(255),
     firstContact DATE,
+    FOREIGN KEY (homePlanetId) REFERENCES Planet(planetId)
+)
+
+/**********************
+INDIVIDUAL
+**********************/
+CREATE TABLE Individual (
+    individualID INT PRIMARY KEY,
+    kindredID INT,
+    homePlanetID INT,
+    firstName NVARCHAR(50),
+    lastName NVARCHAR(50),
+    earthDOB DATE,
+    FOREIGN KEY (kindredID) REFERENCES SapientTaxon(taxonID),
     FOREIGN KEY (homePlanetID) REFERENCES Planet(planetID)
 );
 
@@ -49,20 +62,6 @@ CREATE TABLE Address (
     state NVARCHAR(50),
     nation NVARCHAR(50),
     planet NVARCHAR(50)
-);
-
-/**********************
-INDIVIDUAL
-**********************/
-CREATE TABLE Individual (
-    individualID INT PRIMARY KEY,
-    kindredID INT,
-    homePlanetID INT,
-    firstName NVARCHAR(50),
-    lastName NVARCHAR(50),
-    earthDOB DATE,
-    FOREIGN KEY (kindredID) REFERENCES Kindred(kindredID),
-    FOREIGN KEY (homePlanetID) REFERENCES Planet(planetID)
 );
 
 /**********************
@@ -172,4 +171,5 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 

@@ -11,13 +11,44 @@ CREATE TABLE Planet (
 );
 
 /**********************
-SAPIENT TAXON
+SHIP
 **********************/
-CREATE TABLE SapientTaxon (
-    taxonID INT PRIMARY KEY,
+CREATE TABLE Ship (
+    shipID INT PRIMARY KEY,
+    manufacturer VARCHAR(100),
+    model VARCHAR(100),
+    shipClass VARCHAR(10),
+    capacity INT,
+    startYear INT,
+    endYear INT
+);
+
+/**********************
+VOYAGE
+**********************/
+CREATE TABLE Voyage (
+    voyageID INT PRIMARY KEY,
+    shipID INT,
+    originPlanetID INT,
+    destinationPlanetID INT,
+    startDate DATE,
+    endDate DATE,
+    purpose VARCHAR(255),
+    projectedCost MONEY,
+    finalCost MONEY,
+    FOREIGN KEY (shipID) REFERENCES Ship(shipID),
+    FOREIGN KEY (originPlanetID) REFERENCES Planet(planetID),
+    FOREIGN KEY (destinationPlanetID) REFERENCES Planet(planetID)
+);
+
+/**********************
+BIOTYPE
+**********************/
+CREATE TABLE Biotype (
+    biotypeID INT PRIMARY KEY,
     homePlanetID INT,
-    Name VARCHAR(100),
-    humanoid BIT,
+    name VARCHAR(100),
+    sapient BIT,
     averageLifespan INT,
     description VARCHAR(255),
     firstContact DATE,
@@ -29,26 +60,13 @@ INDIVIDUAL
 **********************/
 CREATE TABLE Individual (
     individualID INT PRIMARY KEY,
-    kindredID INT,
+    biotypeID INT,
     homePlanetID INT,
     firstName NVARCHAR(50),
     lastName NVARCHAR(50),
     earthDOB DATE,
-    FOREIGN KEY (kindredID) REFERENCES SapientTaxon(taxonID),
+    FOREIGN KEY (bioTypeID) REFERENCES Biotype(biotypeID),
     FOREIGN KEY (homePlanetID) REFERENCES Planet(planetID)
-);
-
-/**********************
-SHIP
-**********************/
-CREATE TABLE Ship (
-    shipID INT PRIMARY KEY,
-    manufacturer VARCHAR(100),
-    model VARCHAR(100),
-    shipClass VARCHAR(10),
-    capacity INT,
-    startYear INT,
-    endYear INT
 );
 
 /**********************
@@ -75,24 +93,6 @@ CREATE TABLE Contact (
     phoneNumber NVARCHAR(50),
     FOREIGN KEY (individualID) REFERENCES Individual(individualID),
     FOREIGN KEY (addressID) REFERENCES Address(addressID)
-);
-
-/**********************
-VOYAGE
-**********************/
-CREATE TABLE Voyage (
-    voyageID INT PRIMARY KEY,
-    shipID INT,
-    originPlanetID INT,
-    destinationPlanetID INT,
-    startDate DATE,
-    endDate DATE,
-    purpose VARCHAR(255),
-    projectedCost MONEY,
-    finalCost MONEY,
-    FOREIGN KEY (shipID) REFERENCES Ship(shipID),
-    FOREIGN KEY (originPlanetID) REFERENCES Planet(planetID),
-    FOREIGN KEY (destinationPlanetID) REFERENCES Planet(planetID)
 );
 
 /**********************
@@ -171,6 +171,7 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 
 

@@ -20,7 +20,7 @@ CREATE TABLE Kindred (
     humanoID BIT,
     sapience BIT,
     averageLifespan INT,
-    description VARCHAR(MAX),
+    description VARCHAR(255),
     firstContact DATE,
     FOREIGN KEY (homePlanetID) REFERENCES Planet(planetID)
 );
@@ -88,7 +88,7 @@ CREATE TABLE Voyage (
     destinationPlanetID INT,
     startDate DATE,
     endDate DATE,
-    purpose VARCHAR(MAX),
+    purpose VARCHAR(255),
     projectedCost MONEY,
     finalCost MONEY,
     FOREIGN KEY (shipID) REFERENCES Ships(shipID),
@@ -105,7 +105,7 @@ CREATE TABLE Evaluation (
     evaluatorID INT NOT NULL,
     evalDate DATE,
     score INT,
-    notes VARCHAR(MAX),
+    notes VARCHAR(255),
     FOREIGN KEY (individualID) REFERENCES Individual(individualID),
     FOREIGN KEY (evaluatorID) REFERENCES Individual(individualID)
 );
@@ -118,7 +118,7 @@ CREATE TABLE Discovery (
     loggerID INT,
     voyageID INT,
     discoveryType NVARCHAR(50),
-    description VARCHAR(MAX),
+    description VARCHAR(255),
     logDate SMALLDATETIME DEFAULT GETDATE(),
     FOREIGN KEY loggerID) REFERENCES Individual(individualID),
     FOREIGN KEY (voyageID) REFERENCES Voyage(voyageID)
@@ -133,7 +133,7 @@ CREATE TABLE Conflict (
     conflictName VARCHAR(100),
     startDate DATE,
     endDate DATE,
-    description VARCHAR(MAX),
+    description VARCHAR(255),
     outcome VARCHAR(100),
     FOREIGN KEY (voyageID) REFERENCES Voyage(voyageID)
 );
@@ -172,5 +172,4 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
-
 

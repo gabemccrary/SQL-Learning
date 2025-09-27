@@ -91,7 +91,7 @@ CREATE TABLE Voyage (
     purpose VARCHAR(255),
     projectedCost MONEY,
     finalCost MONEY,
-    FOREIGN KEY (shipID) REFERENCES Ships(shipID),
+    FOREIGN KEY (shipID) REFERENCES Ship(shipID),
     FOREIGN KEY (originPlanetID) REFERENCES Planet(planetID),
     FOREIGN KEY (destinationPlanetID) REFERENCES Planet(planetID)
 );
@@ -120,7 +120,7 @@ CREATE TABLE Discovery (
     discoveryType NVARCHAR(50),
     description VARCHAR(255),
     logDate SMALLDATETIME DEFAULT GETDATE(),
-    FOREIGN KEY loggerID) REFERENCES Individual(individualID),
+    FOREIGN KEY (loggerID) REFERENCES Individual(individualID),
     FOREIGN KEY (voyageID) REFERENCES Voyage(voyageID)
 );
 
@@ -172,5 +172,4 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
-
 

@@ -1,5 +1,5 @@
 /**********************
-PLANETS
+PLANET
 **********************/
 CREATE TABLE Planet (
     planetID INT PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE Planet (
 );
 
 /**********************
-Kindred
+KINDRED
 **********************/
 CREATE TABLE Kindred (
     kindredID INT PRIMARY KEY,
@@ -26,7 +26,7 @@ CREATE TABLE Kindred (
 );
 
 /**********************
-SHIPS
+SHIP
 **********************/
 CREATE TABLE Ship (
     shipID INT PRIMARY KEY,
@@ -52,7 +52,7 @@ CREATE TABLE Address (
 );
 
 /**********************
-INDIVIDUALS
+INDIVIDUAL
 **********************/
 CREATE TABLE Individual (
     individualID INT PRIMARY KEY,
@@ -147,7 +147,7 @@ CREATE TABLE Department (
 );
 
 /**********************
-ROLES
+ROLE
 **********************/
 CREATE TABLE Role (
     roleID INT PRIMARY KEY,
@@ -157,9 +157,9 @@ CREATE TABLE Role (
 );
 
 /**********************
-CREW MEMBERS
+CREW MEMBER
 **********************/
-CREATE TABLE CrewMembers (
+CREATE TABLE CrewMember (
     memberID INT PRIMARY KEY,
     individualID INT,
     shipID INT,
@@ -172,4 +172,5 @@ CREATE TABLE CrewMembers (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 

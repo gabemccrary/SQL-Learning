@@ -17,7 +17,7 @@ CREATE TABLE Kindred (
     kindredID INT PRIMARY KEY,
     homePlanetID INT,
     name VARCHAR(100),
-    humanoID BIT,
+    humanoid BIT,
     sapience BIT,
     averageLifespan INT,
     description VARCHAR(255),
@@ -172,4 +172,5 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 

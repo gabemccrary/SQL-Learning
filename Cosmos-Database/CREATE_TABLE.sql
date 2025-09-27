@@ -3,11 +3,11 @@ PLANET
 **********************/
 CREATE TABLE Planet (
     planetID INT PRIMARY KEY,
-    planetName VARCHAR(100),
-    starSystem VARCHAR(100),
-    inhabited BIT,
+    planetName VARCHAR(50),
+    starSystem VARCHAR(50),
+    habitable BIT,
     logDate SMALLDATETIME DEFAULT GETDATE(),
-    composition VARCHAR(100)
+    description VARCHAR(255)
 );
 
 /**********************
@@ -171,6 +171,7 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 
 

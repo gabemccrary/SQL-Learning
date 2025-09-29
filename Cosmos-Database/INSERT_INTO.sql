@@ -1,7 +1,7 @@
 /**********************
 PLANETS
 **********************/
-INSERT INTO Planets (PlanetID, PlanetName, StarSystem, Inhabited, LogDate, Composition)
+INSERT INTO Planets (planetID, name, star, habitable, logDate, description)
 VALUES
 (1, 'Earth', 'Sol', 1, NULL, 'Terrestrial'),
 (2, 'Aurorus', 'Panthera', 1, '2012-05-14', 'Terrestrial'),
@@ -18,26 +18,9 @@ VALUES
 (13, 'Tython', 'Celestia', 1, NULL, 'Terrestrial');
 
 /**********************
-KINDRED
-**********************/
-INSERT INTO Kindred (KindredID, HomePlanetID, Name, Humanoid, Sapience, AverageLifespan, Description, FirstContact)
-VALUES
-(1, 1, 'Human', 1, 1, 90, 'Adaptive and curious.', NULL),
-(2, 2, 'Ekkluvian', 1, 1, 150, 'Advanced technology. Bioluminescent beings.', '2012-05-14'),
-(3, 3, 'Cardan', 1, 1, 120, 'Metachrosis. Humanoid.', '2013-11-20'),
-(4, 4, 'Aquani', 0, 1, 200, 'Amphibious ocean dwellers.', '2015-07-07'),
-(5, 6, 'Lyrian', 1, 1, 100, 'Telepathic after age 45. Humanoids.', '2017-09-01'),
-(6, 3, 'Khari', 0, 1, 80, 'Geo-biology. Nomadic. Radiation resistance.', '2018-03-11'),
-(7, 13, 'Veyran', 1, 1, 70, 'Tall desert dwellers. Honor-shame culture.', '2019-12-25'),
-(8, 9, 'Emberi', 1, 1, 95, 'Fire-resistant humanoids from volcanic regions.', '2020-06-30'),
-(9, 11, 'Peloran', 1, 1, 85, 'Tropic forest dwellers. Excellent hunters.', '2022-08-09'),
-(10, 12, 'Kronan', 0, 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
-(11, 4, 'Wyki', 1, 1, 110, 'Limited technology. Some live on nearby moon.', NULL);
-
-/**********************
 SHIPS
 **********************/
-INSERT INTO Ships (ShipID, Manufacturer, Model, ShipClass, Capacity, StartYear, EndYear)
+INSERT INTO Ships (shipID, manufacturer, model, shipClass, capacity, startYear, endYear)
 VALUES
 (1, 'Nova', 'Velox', 'EXP', 120, 2015, NULL),
 (2, 'Forge', 'Infinitum', 'BAT', 300, 2012, NULL),
@@ -52,9 +35,44 @@ VALUES
 (11, 'Celestia', 'Comet', 'TRA', 90, 2018, NULL);
 
 /**********************
+VOYAGE
+**********************/
+INSERT INTO Voyage (voyageID, shipID, originPlanetID, destinationPlanetID, startDate, endDate, purpose, projectedCost, finalCost)
+VALUES
+(1, 1, 1, 2, '2018-04-01', '2018-04-10', 'Diplomacy', 1200000, 1185000),
+(2, 2, 3, 5, '2019-05-12', '2019-05-20', 'Conflict', 5000000, 5600000),
+(3, 3, 2, 4, '2020-06-05', '2020-06-15', 'Research', 800000, 750000),
+(4, 4, 1, 1, '2015-07-01', '2015-07-07', 'Trade', 100000, NULL),
+(5, 5, 6, 8, '2021-03-01', NULL, 'Exploration', 600000, NULL),
+(6, 6, 7, 9, '2020-12-01', '2020-12-12', 'Science', 400000, 410000),
+(7, 7, 8, 2, '2022-08-05', '2022-08-18', 'Defense', 750000, 760000),
+(8, 8, 4, 3, '2021-09-15', NULL, 'Trade', 300000, NULL),
+(9, 9, 11, 12, '2023-01-05', '2023-01-20', 'Exploration', 900000, 910000),
+(10, 10, 12, 6, '2019-11-02', '2019-11-10', 'Military', 1200000, 1250000),
+(11, 11, 13, 1, '2023-04-01', NULL, 'Research', 450000, NULL),
+(12, 5, 8, 7, '2022-02-10', '2022-02-20', 'Diplomacy', 500000, 495000);
+
+/**********************
+BIOTYPE
+**********************/
+INSERT INTO Biotype (biotypeID, homePlanetID, name, sapient, averageLifespan, description, firstContact)
+VALUES
+(1, 1, 'Human', 1, 1, 90, 'Adaptive and curious.', NULL),
+(2, 2, 'Ekkluvian', 1, 1, 150, 'Advanced technology. Bioluminescent beings.', '2012-05-14'),
+(3, 3, 'Cardan', 1, 1, 120, 'Metachrosis. Humanoid.', '2013-11-20'),
+(4, 4, 'Aquani', 0, 1, 200, 'Amphibious ocean dwellers.', '2015-07-07'),
+(5, 6, 'Lyrian', 1, 1, 100, 'Telepathic after age 45. Humanoids.', '2017-09-01'),
+(6, 3, 'Khari', 0, 1, 80, 'Geo-biology. Nomadic. Radiation resistance.', '2018-03-11'),
+(7, 13, 'Veyran', 1, 1, 70, 'Tall desert dwellers. Honor-shame culture.', '2019-12-25'),
+(8, 9, 'Emberi', 1, 1, 95, 'Fire-resistant humanoids from volcanic regions.', '2020-06-30'),
+(9, 11, 'Peloran', 1, 1, 85, 'Tropic forest dwellers. Excellent hunters.', '2022-08-09'),
+(10, 12, 'Kronan', 0, 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
+(11, 4, 'Wyki', 1, 1, 110, 'Limited technology. Some live on nearby moon.', NULL);
+
+/**********************
 ADDRESS
 **********************/
-INSERT INTO Address (AddressID, Number, Street, City, State, Nation, Planet)
+INSERT INTO Address (addressID, number, street, city, state, nation, planet)
 VALUES
 (1, 42, 'Orion Way', 'Kansas City', 'Missouri', 'Federated Earth', 'Earth'),
 (2, 15, 'Crystal Plaza', 'Veyra', 'High Plains', 'Ekkluvian Union', 'Aurorus'),
@@ -71,7 +89,7 @@ VALUES
 /**********************
 CONTACT
 **********************/
-INSERT INTO Contact (ContactID, IndividualID, AddressID, EmailAddress, PhoneNumber)
+INSERT INTO Contact (contactID, individualID, addressID, emailAddress, phoneNumber)
 VALUES
 (1, 1, 1, 'aurora.sol@earthling.nova', '+1-555-2200'),
 (2, 2, 2, 'havokk@galactic.nova', NULL),
@@ -87,7 +105,7 @@ VALUES
 /**********************
 INDIVIDUALS
 **********************/
-INSERT INTO Individuals (IndividualID, KindredID, HomePlanetID, FirstName, LastName, EarthDOB)
+INSERT INTO Individuals (individualID, biotypeID, homePlanetID, firstName, lastName, earthDOB)
 VALUES
 (1, 1, 1, 'Aurora', 'Sol', '1990-03-11'),
 (2, 3, 3, 'Kina', 'Havok', '1985-09-25'),
@@ -106,7 +124,7 @@ VALUES
 /**********************
 DEPARTMENTS
 **********************/
-INSERT INTO Department (DepartmentID, Name)
+INSERT INTO Department (departmentID, name)
 VALUES
 (1, 'Command'),
 (2, 'Engineering'),
@@ -118,12 +136,12 @@ VALUES
 (8, 'Exploration'),
 (9, 'Logistics'),
 (10, 'Communications'),
-(11, 'Research'); -- extra for query examples
+(11, 'Research');
 
 /**********************
 ROLES
 **********************/
-INSERT INTO Roles (RoleID, DepartmentID, Name)
+INSERT INTO Roles (roleID, departmentID, name)
 VALUES
 (1, 1, 'Pilot'),
 (2, 2, 'Engineer'),
@@ -138,12 +156,12 @@ VALUES
 (11, 9, 'Mechanic'),
 (12, 10, 'Comms Specialist'),
 (13, 11, 'Astrophysicist'),
-(14, 11, 'Xenobiologist'); -- extra roles for query demos
+(14, 11, 'Systems Analyst');
 
 /**********************
-CREW MEMBERS
+CREW MEMBER
 **********************/
-INSERT INTO CrewMembers (MemberID, IndividualID, ShipID, DepartmentID, RoleID, StartDate, EndDate)
+INSERT INTO CrewMember (memberID, individualID, shipID, departmentID, roleID, startDate, endDate)
 VALUES
 (1, 1, 1, 1, 1, '2015-01-01', NULL),
 (2, 4, 1, 2, 2, '2016-03-10', NULL),
@@ -158,30 +176,12 @@ VALUES
 (11, 11, 9, 5, 7, '2022-04-10', NULL),
 (12, 12, 10, 10, 12, '2023-01-01', NULL),
 (13, 13, 11, 11, 13, '2023-03-01', NULL),
-(14, 1, 9, 11, 14, '2023-04-15', NULL); -- extra crew for queries
-
-/**********************
-VOYAGES
-**********************/
-INSERT INTO Voyage (VoyageID, ShipID, OriginPlanetID, DestinationPlanetID, StartDate, EndDate, Purpose, ProjectedCost, FinalCost)
-VALUES
-(1, 1, 1, 2, '2018-04-01', '2018-04-10', 'Diplomacy', 1200000, 1185000),
-(2, 2, 3, 5, '2019-05-12', '2019-05-20', 'Conflict', 5000000, 5600000),
-(3, 3, 2, 4, '2020-06-05', '2020-06-15', 'Research', 800000, 750000),
-(4, 4, 1, 1, '2015-07-01', '2015-07-07', 'Trade', 100000, NULL),
-(5, 5, 6, 8, '2021-03-01', NULL, 'Exploration', 600000, NULL),
-(6, 6, 7, 9, '2020-12-01', '2020-12-12', 'Science', 400000, 410000),
-(7, 7, 8, 2, '2022-08-05', '2022-08-18', 'Defense', 750000, 760000),
-(8, 8, 4, 3, '2021-09-15', NULL, 'Trade', 300000, NULL),
-(9, 9, 11, 12, '2023-01-05', '2023-01-20', 'Exploration', 900000, 910000),
-(10, 10, 12, 6, '2019-11-02', '2019-11-10', 'Military', 1200000, 1250000),
-(11, 11, 13, 1, '2023-04-01', NULL, 'Research', 450000, NULL),
-(12, 5, 8, 7, '2022-02-10', '2022-02-20', 'Diplomacy', 500000, 495000);
+(14, 1, 9, 11, 14, '2023-04-15', NULL);
 
 /**********************
 EVALUATION
 **********************/
-INSERT INTO Evaluation (EvaluationID, IndividualID, EvaluatorID, EvalDate, Score, Notes)
+INSERT INTO Evaluation (evaluationID, individualID, evaluatorID, evalDate, score, notes)
 VALUES
 (1, 1, 5, '2018-04-11', 95, 'Excellent leadership during negotiations'),
 (2, 4, 1, '2018-04-12', 88, 'Kept ship systems stable under stress'),
@@ -199,7 +199,7 @@ VALUES
 /**********************
 DISCOVERY
 **********************/
-INSERT INTO Discovery (DiscoveryID, LoggerID, VoyageID, DiscoveryType, Description, LogDate)
+INSERT INTO Discovery (discoveryID, loggerID, voyageID, discoveryType, description, logDate)
 VALUES
 (1, 1, 1, 'Flora', 'New plant Kindred', '2018-04-05'),
 (2, 2, 2, 'Fauna', NULL, '2019-05-15'),
@@ -217,7 +217,7 @@ VALUES
 /**********************
 CONFLICT
 **********************/
-INSERT INTO Conflict (ConflictID, VoyageID, ConflictName, StartDate, EndDate, Description, Outcome)
+INSERT INTO Conflict (conflictID, voyageID, conflictName, startDate, endDate, description, outcome)
 VALUES
 (1, 2, 'Battle of Kenzana', '2019-05-20', NULL, 'Major fleet engagement near the gas giant.', 'Treaty'),
 (2, 7, 'Lyzikan War', '2022-08-05', '2022-08-18', 'Conflict between colonies', NULL),
@@ -226,3 +226,4 @@ VALUES
 (5, 8, 'Aurorus Trade Dispute', '2021-09-15', '2021-09-18', NULL, NULL),
 (6, 11, 'Tython Clash', '2023-04-03', NULL, 'Encounter with nomadic tribes', 'Resolved'),
 (7, 12, 'Dégron Mining Dispute', '2022-02-12', '2022-02-20', NULL, 'Settlement');
+

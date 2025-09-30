@@ -34,8 +34,8 @@ CREATE TABLE Voyage (
     startDate DATE,
     endDate DATE,
     purpose VARCHAR(255),
-    projectedCost MONEY,
-    finalCost MONEY,
+    projectedCost DECIMAL(19,4),
+    finalCost DECIMAL(19,4),
     FOREIGN KEY (shipID) REFERENCES Ship(shipID),
     FOREIGN KEY (originPlanetID) REFERENCES Planet(planetID),
     FOREIGN KEY (destinationPlanetID) REFERENCES Planet(planetID)
@@ -171,6 +171,7 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 
 

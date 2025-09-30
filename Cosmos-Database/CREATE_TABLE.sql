@@ -2,7 +2,7 @@
 PLANET
 **********************/
 CREATE TABLE Planet (
-    planetID INT PRIMARY KEY,
+    planetID INT IDENTITY (1,1) PRIMARY KEY,
     name NVARCHAR(50),
     star NVARCHAR(50),
     habitable BIT,
@@ -14,7 +14,7 @@ CREATE TABLE Planet (
 SHIP
 **********************/
 CREATE TABLE Ship (
-    shipID INT PRIMARY KEY,
+    shipID INT IDENTITY (1,1) PRIMARY KEY,
     manufacturer VARCHAR(50),
     model VARCHAR(50),
     shipClass VARCHAR(10),
@@ -27,7 +27,7 @@ CREATE TABLE Ship (
 VOYAGE
 **********************/
 CREATE TABLE Voyage (
-    voyageID INT PRIMARY KEY,
+    voyageID INT IDENTITY (1,1) PRIMARY KEY,
     shipID INT,
     originPlanetID INT,
     destinationPlanetID INT,
@@ -45,7 +45,7 @@ CREATE TABLE Voyage (
 BIOTYPE
 **********************/
 CREATE TABLE Biotype (
-    biotypeID INT PRIMARY KEY,
+    biotypeID INT IDENTITY (1,1) PRIMARY KEY,
     homePlanetID INT,
     name VARCHAR(100),
     sapient BIT,
@@ -59,7 +59,7 @@ CREATE TABLE Biotype (
 INDIVIDUAL
 **********************/
 CREATE TABLE Individual (
-    individualID INT PRIMARY KEY,
+    individualID INT IDENTITY (1,1) PRIMARY KEY,
     biotypeID INT,
     homePlanetID INT,
     firstName NVARCHAR(50),
@@ -73,7 +73,7 @@ CREATE TABLE Individual (
 ADDRESS
 **********************/
 CREATE TABLE Address (
-    addressID INT PRIMARY KEY,
+    addressID INT IDENTITY (1,1) PRIMARY KEY,
     number INT,
     street NVARCHAR(50),
     city NVARCHAR(50),
@@ -86,7 +86,7 @@ CREATE TABLE Address (
 CONTACT
 **********************/
 CREATE TABLE Contact (
-    contactID INT PRIMARY KEY,
+    contactID INT IDENTITY (1,1) PRIMARY KEY,
     individualID INT,
     addressID INT,
     emailAddress NVARCHAR(50),
@@ -99,7 +99,7 @@ CREATE TABLE Contact (
 EVALUATION
 **********************/
 CREATE TABLE Evaluation (
-    evaluationID INT PRIMARY KEY,
+    evaluationID INT IDENTITY (1,1) PRIMARY KEY,
     individualID INT NOT NULL,
     evaluatorID INT NOT NULL,
     evalDate DATE,
@@ -113,7 +113,7 @@ CREATE TABLE Evaluation (
 DISCOVERY
 **********************/
 CREATE TABLE Discovery (
-    discoveryID INT PRIMARY KEY,
+    discoveryID INT IDENTITY (1,1) PRIMARY KEY,
     loggerID INT,
     voyageID INT,
     discoveryType NVARCHAR(50),
@@ -127,7 +127,7 @@ CREATE TABLE Discovery (
 CONFLICT
 **********************/
 CREATE TABLE Conflict (
-    conflictID INT PRIMARY KEY,
+    conflictID INT IDENTITY (1,1) PRIMARY KEY,
     voyageID INT,
     conflictName VARCHAR(50),
     startDate DATE,
@@ -141,7 +141,7 @@ CREATE TABLE Conflict (
 DEPARTMENT
 **********************/
 CREATE TABLE Department (
-    departmentID INT PRIMARY KEY,
+    departmentID INT IDENTITY (1,1) PRIMARY KEY,
     name VARCHAR(100)
 );
 
@@ -149,7 +149,7 @@ CREATE TABLE Department (
 ROLE
 **********************/
 CREATE TABLE Role (
-    roleID INT PRIMARY KEY,
+    roleID INT IDENTITY (1,1) PRIMARY KEY,
     departmentID INT,
     name VARCHAR(50),
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID)
@@ -159,7 +159,7 @@ CREATE TABLE Role (
 CREW MEMBER
 **********************/
 CREATE TABLE CrewMember (
-    memberID INT PRIMARY KEY,
+    memberID INT IDENTITY (1000,1) PRIMARY KEY,
     individualID INT,
     shipID INT,
     departmentID INT,
@@ -171,10 +171,6 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
-
-
-
-
 
 
 

@@ -129,7 +129,7 @@ CONFLICT
 CREATE TABLE Conflict (
     conflictID INT IDENTITY (1,1) PRIMARY KEY,
     voyageID INT,
-    conflictName VARCHAR(50),
+    name VARCHAR(50),
     startDate DATE,
     endDate DATE,
     description VARCHAR(255),
@@ -171,6 +171,7 @@ CREATE TABLE CrewMember (
     FOREIGN KEY (departmentID) REFERENCES Department(departmentID),
     FOREIGN KEY (roleID) REFERENCES Role(roleID)
 );
+
 
 
 

@@ -1,40 +1,40 @@
-/**********************
-PLANETS
+/*********************
+PLANET
 **********************/
-INSERT INTO Planets (planetID, name, star, habitable, logDate, description)
+INSERT INTO Planet (planetID, name, star, habitable, logDate, description)
 VALUES
 (1, 'Earth', 'Sol', 1, NULL, 'Terrestrial'),
-(2, 'Aurorus', 'Panthera', 1, '2012-05-14', 'Terrestrial'),
-(3, 'Achilles', 'Kadosh', 1, '2013-11-20', 'Terrestrial'),
-(4, 'Okéanos', 'Caldrun', 1, '2015-07-07', 'Hypherian'),
-(5, 'Zenith', 'Stellar Ridge', 0, '2016-02-12', 'Gas Giant'),
-(6, 'Lyric', 'Tarpax', 1, '2017-09-01', 'Super-Earth'),
-(7, 'Kharos', 'Aquila', 0, '2018-03-11', 'Super-Earth'),
-(8, 'Dégron', 'Altair', 1, '2019-12-25', 'Hypherian'),
-(9, 'Cinbrali', 'Volcanis', 1, '2020-06-30', 'Lava'),
-(10, 'Gihara', 'Edani', 0, '2021-04-15', 'Gas Giant'),
+(2, 'Aurorus', 'Panthera', 1, '2012-05-14 13:47:08', 'Terrestrial'),
+(3, 'Achilles', 'Kadosh', 1, '2013-11-20 10:32:12', 'Terrestrial'),
+(4, 'Okéanos', 'Caldrun', 1, '2015-07-07 11:12:13', 'Hypherian'),
+(5, 'Zenith', 'Stellar Ridge', 0, '2016-02-12 07:43:23', 'Gas Giant'),
+(6, 'Lyric', 'Tarpax', 1, '2017-09-01 09:08:07', 'Super-Earth'),
+(7, 'Kharos', 'Aquila', 0, '2018-03-11 14:23:17', 'Super-Earth'),
+(8, 'Dégron', 'Altair', 1, '2019-12-25 11:14:14', 'Hypherian'),
+(9, 'Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Lava'),
+(10, 'Gihara', 'Edani', 0, NULL, 'Gas Giant'),
 (11, 'Pelora', 'Androd', 1, '2022-08-09', 'Hypherian'),
-(12, 'Xyris', 'Kronos', 0, '2023-01-19', 'Ice Giant'),
+(12, 'Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Ice Giant'),
 (13, 'Tython', 'Celestia', 1, NULL, 'Terrestrial');
 
-/**********************
-SHIPS
+/*********************
+SHIP
 **********************/
-INSERT INTO Ships (shipID, manufacturer, model, shipClass, capacity, startYear, endYear)
+INSERT INTO Ship (shipID, manufacturer, model, shipClass, capacity, startYear, endYear)
 VALUES
-(1, 'Nova', 'Velox', 'EXP', 120, 2015, NULL),
-(2, 'Forge', 'Infinitum', 'BAT', 300, 2012, NULL),
+(1, 'Nova', 'Velox', 'EXP', 120, 2025, NULL),
+(2, 'Forge', 'Infinitum', 'BAT', 300, 2012, 2021),
 (3, 'Nova', 'Polaris', 'SCI', 80, 2018, NULL),
 (4, 'The Guild', 'Crimson Scepter', 'TRA', 60, 2010, 2020),
-(5, 'Starry', 'Horizon', 'EXP', 100, 2017, NULL),
-(6, 'ZenithWorks', 'Pioneer', 'SCI', 50, 2016, NULL),
+(5, 'AstroWorks', 'Expanse', 'EXP', 100, 2017, NULL),
+(6, 'Voyager', 'Pioneer', 'SCI', 50, 2018, NULL),
 (7, 'Forge', 'Titan', 'BAT', 400, 2019, NULL),
 (8, 'Celestia', 'Borialis', 'TRA', 70, 2020, NULL),
 (9, 'Nova', 'Astera', 'EXP', 130, 2021, NULL),
 (10, 'Forge', 'Eclipse', 'BAT', 250, 2015, NULL),
 (11, 'Celestia', 'Comet', 'TRA', 90, 2018, NULL);
 
-/**********************
+/*********************
 VOYAGE
 **********************/
 INSERT INTO Voyage (voyageID, shipID, originPlanetID, destinationPlanetID, startDate, endDate, purpose, projectedCost, finalCost)
@@ -52,7 +52,7 @@ VALUES
 (11, 11, 13, 1, '2023-04-01', NULL, 'Research', 450000, NULL),
 (12, 5, 8, 7, '2022-02-10', '2022-02-20', 'Diplomacy', 500000, 495000);
 
-/**********************
+/*********************
 BIOTYPE
 **********************/
 INSERT INTO Biotype (biotypeID, homePlanetID, name, sapient, averageLifespan, description, firstContact)
@@ -63,49 +63,16 @@ VALUES
 (4, 4, 'Aquani', 0, 1, 200, 'Amphibious ocean dwellers.', '2015-07-07'),
 (5, 6, 'Lyrian', 1, 1, 100, 'Telepathic after age 45. Humanoids.', '2017-09-01'),
 (6, 3, 'Khari', 0, 1, 80, 'Geo-biology. Nomadic. Radiation resistance.', '2018-03-11'),
-(7, 13, 'Veyran', 1, 1, 70, 'Tall desert dwellers. Honor-shame culture.', '2019-12-25'),
+(7, 13, 'Veyran', 1, 1, 70, 'Tall desert dwellers. Honor-shame culture.', NULL),
 (8, 9, 'Emberi', 1, 1, 95, 'Fire-resistant humanoids from volcanic regions.', '2020-06-30'),
 (9, 11, 'Peloran', 1, 1, 85, 'Tropic forest dwellers. Excellent hunters.', '2022-08-09'),
 (10, 12, 'Kronan', 0, 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
 (11, 4, 'Wyki', 1, 1, 110, 'Limited technology. Some live on nearby moon.', NULL);
 
-/**********************
-ADDRESS
+/*********************
+INDIVIDUAL
 **********************/
-INSERT INTO Address (addressID, number, street, city, state, nation, planet)
-VALUES
-(1, 42, 'Orion Way', 'Kansas City', 'Missouri', 'Federated Earth', 'Earth'),
-(2, 15, 'Crystal Plaza', 'Veyra', 'High Plains', 'Ekkluvian Union', 'Aurorus'),
-(3, 77, 'Blade Road', 'Keznar', 'Ashen Ridge', 'Hypherian Clans', 'Achilles'),
-(4, 8, 'Coral Dome', 'Tethys', 'Pelagia', 'Cardan Confederacy', 'Okéanos'),
-(5, 301, 'Starfall Lane', 'Lyricon', 'North Reach', 'Lyrian Syndicate', 'Lyric'),
-(6, 22, 'Iron Path', 'Tharok City', 'Lowlands', 'Tharok Tribes', 'Kharos'),
-(7, 501, 'Dune Crest', 'Sandspire', 'Central Flats', 'Veyran Collective', 'Dégron'),
-(8, 66, 'Lava Ridge', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cindralis'),
-(9, 123, 'Emerald Way', 'Pelora Prime', 'Deepwilds', 'Peloran Hunters', 'Pelora'),
-(10, 9, 'Frozen Spur', 'Tyris Hollow', 'Glacier Belt', 'Tyran Packs', 'Xyris'),
-(11, 5, 'Sirocco Lane', 'Tython City', 'Desert Zone', 'Tython Confederacy', 'Tython');
-
-/**********************
-CONTACT
-**********************/
-INSERT INTO Contact (contactID, individualID, addressID, emailAddress, phoneNumber)
-VALUES
-(1, 1, 1, 'aurora.sol@earthling.nova', '+1-555-2200'),
-(2, 2, 2, 'havokk@galactic.nova', NULL),
-(3, 3, 3, NULL, '+9-555-8833'),
-(4, 4, 4, 'carek56@galactic.star', '+1-555-1122'),
-(5, 5, 4, 'indaya.phal@polaris.star', NULL),
-(6, 6, 3, NULL, NULL),
-(7, 7, 5, 'lyra.icenova@galactic.nova', '+4-555-7766'),
-(8, 8, 6, 'tharos.stone@collective.star', '+5-555-3344'),
-(9, 9, 7, 'veyra.desert@collective.star', NULL),
-(10, NULL, 8, 'cindra.family@alliance.nova', '+3-555-5566');
-
-/**********************
-INDIVIDUALS
-**********************/
-INSERT INTO Individuals (individualID, biotypeID, homePlanetID, firstName, lastName, earthDOB)
+INSERT INTO Individual (individualID, biotypeID, homePlanetID, firstName, lastName, earthDOB)
 VALUES
 (1, 1, 1, 'Aurora', 'Sol', '1990-03-11'),
 (2, 3, 3, 'Kina', 'Havok', '1985-09-25'),
@@ -116,69 +83,45 @@ VALUES
 (7, 5, 6, 'Sira', 'Nyce', '1992-11-22'),
 (8, 6, 7, 'Jericho', 'Nimbus', '1978-01-15'),
 (9, 7, 8, 'Zaría', 'Dune', NULL),
-(10, 8, 9, 'Cruz', 'Quesar', '1983-02-27'),
+(10, 8, 9, 'Cruz', 'Quasar', '1983-02-27'),
 (11, 9, 11, 'Vexa', 'Dream', '1999-10-05'),
 (12, 10, 12, 'Gorak', 'Pang', '1990-06-06'),
-(13, 11, 13, 'Lyra', 'Sands', NULL); -- extra individual for joins
+(13, 11, 13, 'Lyra', 'Sands', NULL);
 
-/**********************
-DEPARTMENTS
+/*********************
+ADDRESS
 **********************/
-INSERT INTO Department (departmentID, name)
+INSERT INTO Address (addressID, number, street, city, state, nation, planet)
 VALUES
-(1, 'Command'),
-(2, 'Engineering'),
-(3, 'Science'),
-(4, 'Diplomacy'),
-(5, 'Medical'),
-(6, 'Security'),
-(7, 'Trade'),
-(8, 'Exploration'),
-(9, 'Logistics'),
-(10, 'Communications'),
-(11, 'Research');
+(1, 42, 'Constellation Blvd', 'Kansas City', 'Missouri', 'USA', 'Earth'),
+(2, 15, 'Twinkle Blvd', 'Veyra', 'High Plains', 'Ekkluvian Union', 'Aurorus'),
+(3, 777, 'Starry Rd', 'Keznar', 'Ashen Ridge', 'Hypherian Clans', 'Achilles'),
+(4, 801, 'Astro Wy', 'Tethys', 'Pelagia', 'Cardan Confederacy', 'Okéanos'),
+(5, 301, 'Stardust Ln', 'Lyricon', 'North Reach', 'Lyrian Syndicate', 'Lyric'),
+(6, 22, 'Cosmic Cir', 'Tharok City', 'Lowlands', 'Tharok Tribes', 'Kharos'),
+(7, 501, 'Asteroid Dr', 'Sandspire', 'Central Flats', 'Veyran Collective', 'Dégron'),
+(8, 66, 'Galaxy Ridge Dr', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cindralis'),
+(9, 123, 'Emerald Ave', 'Pelora Prime', 'Deepwilds', 'Peloran Hunters', 'Pelora'),
+(10, 9, 'Nova St', 'Tyris Hollow', 'Glacier Belt', 'Tyran Packs', 'Xyris'),
+(11, 5, 'Lunar Ln', 'Tython City', 'Desert Zone', 'Tython Confederacy', 'Tython');
 
-/**********************
-ROLES
+/*********************
+CONTACT
 **********************/
-INSERT INTO Roles (roleID, departmentID, name)
+INSERT INTO Contact (contactID, individualID, addressID, emailAddress, phoneNumber)
 VALUES
-(1, 1, 'Pilot'),
-(2, 2, 'Engineer'),
-(3, 3, 'Scientist'),
-(4, 4, 'Diplomat'),
-(5, 3, 'Biologist'),
-(6, 3, 'Botanist'),
-(7, 5, 'Doctor'),
-(8, 6, 'Security Officer'),
-(9, 7, 'Trader'),
-(10, 8, 'Explorer'),
-(11, 9, 'Mechanic'),
-(12, 10, 'Comms Specialist'),
-(13, 11, 'Astrophysicist'),
-(14, 11, 'Systems Analyst');
+(1, 1, 1, 'aurora.sol@earthling.nova', '+1-555-2200'),
+(2, 2, 2, 'havokk@galactic.nova', NULL),
+(3, 3, 3, NULL, '+9-555-8833'),
+(4, 4, 4, 'carek56@galactic.star', '+1-555-1122'),
+(5, 5, 4, 'indaya.phal@polaris.star', NULL),
+(6, 6, 3, NULL, NULL),
+(7, 7, 5, 'nycel@galactic.nova', '+4-555-7766'),
+(8, 8, 6, 'zaria.dune@collective.star', '+5-555-3344'),
+(9, 9, 7, 'veyra.desert@collective.star', NULL),
+(10, NULL, 8, 'cindra.family@alliance.nova', '+3-555-5566');
 
-/**********************
-CREW MEMBER
-**********************/
-INSERT INTO CrewMember (memberID, individualID, shipID, departmentID, roleID, startDate, endDate)
-VALUES
-(1, 1, 1, 1, 1, '2015-01-01', NULL),
-(2, 4, 1, 2, 2, '2016-03-10', NULL),
-(3, 3, 3, 2, 2, '2019-06-01', NULL),
-(4, 5, 3, 4, 4, '2019-06-01', NULL),
-(5, 2, 2, 3, 6, '2012-05-01', NULL),
-(6, 6, 2, 3, 5, '2013-07-15', '2020-05-12'),
-(7, 7, 5, 8, 10, '2018-08-01', NULL),
-(8, 8, 6, 6, 8, '2019-02-14', NULL),
-(9, 9, 7, 3, 3, '2020-09-01', NULL),
-(10, 10, 8, 7, 9, '2021-11-20', NULL),
-(11, 11, 9, 5, 7, '2022-04-10', NULL),
-(12, 12, 10, 10, 12, '2023-01-01', NULL),
-(13, 13, 11, 11, 13, '2023-03-01', NULL),
-(14, 1, 9, 11, 14, '2023-04-15', NULL);
-
-/**********************
+/*********************
 EVALUATION
 **********************/
 INSERT INTO Evaluation (evaluationID, individualID, evaluatorID, evalDate, score, notes)
@@ -196,7 +139,7 @@ VALUES
 (11, 13, 1, '2023-04-05', 82, 'Astrophysics mission evaluated'),
 (12, 1, 14, '2023-04-16', 97, 'Excellent collaboration');
 
-/**********************
+/*********************
 DISCOVERY
 **********************/
 INSERT INTO Discovery (discoveryID, loggerID, voyageID, discoveryType, description, logDate)
@@ -214,7 +157,7 @@ VALUES
 (11, 11, 11, 'Research', 'Ancient artifact discovered', '2023-04-02'),
 (12, 12, 12, 'Science', NULL, '2022-02-15');
 
-/**********************
+/*********************
 CONFLICT
 **********************/
 INSERT INTO Conflict (conflictID, voyageID, conflictName, startDate, endDate, description, outcome)
@@ -226,4 +169,62 @@ VALUES
 (5, 8, 'Aurorus Trade Dispute', '2021-09-15', '2021-09-18', NULL, NULL),
 (6, 11, 'Tython Clash', '2023-04-03', NULL, 'Encounter with nomadic tribes', 'Resolved'),
 (7, 12, 'Dégron Mining Dispute', '2022-02-12', '2022-02-20', NULL, 'Settlement');
+
+/*********************
+DEPARTMENT
+**********************/
+INSERT INTO Department (departmentID, name)
+VALUES
+(1, 'Command'),
+(2, 'Engineering'),
+(3, 'Science'),
+(4, 'Diplomacy'),
+(5, 'Medical'),
+(6, 'Security'),
+(7, 'Trade'),
+(8, 'Exploration'),
+(9, 'Logistics'),
+(10, 'Communications'),
+(11, 'Research');
+
+/*********************
+ROLE
+**********************/
+INSERT INTO Role (roleID, departmentID, name)
+VALUES
+(1, 1, 'Pilot'),
+(2, 2, 'Engineer'),
+(3, 3, 'Scientist'),
+(4, 4, 'Diplomat'),
+(5, 3, 'Biologist'),
+(6, 3, 'Botanist'),
+(7, 5, 'Doctor'),
+(8, 6, 'Security Officer'),
+(9, 7, 'Trader'),
+(10, 8, 'Explorer'),
+(11, 9, 'Mechanic'),
+(12, 10, 'Comms Specialist'),
+(13, 11, 'Astrophysicist'),
+(14, 11, 'Systems Analyst');
+
+/*********************
+CREW MEMBER
+**********************/
+INSERT INTO CrewMember (memberID, individualID, shipID, departmentID, roleID, startDate, endDate)
+VALUES
+(1, 1, 1, 1, 1, '2015-01-01', NULL),
+(2, 4, 1, 2, 2, '2016-03-10', NULL),
+(3, 3, 3, 2, 2, '2019-06-01', NULL),
+(4, 5, 3, 4, 4, '2019-06-01', NULL),
+(5, 2, 2, 3, 6, '2012-05-01', NULL),
+(6, 6, 2, 3, 5, '2013-07-15', '2020-05-12'),
+(7, 7, 5, 8, 10, '2020-06-01', NULL),
+(8, 8, 6, 6, 8, '2019-02-14', NULL),
+(9, 9, 7, 3, 3, '2020-09-01', NULL),
+(10, 10, 8, 7, 9, '2021-11-20', NULL),
+(11, 11, 9, 5, 7, '2022-04-10', NULL),
+(12, 12, 10, 10, 12, '2023-01-01', NULL),
+(13, 13, 11, 11, 13, '2023-03-01', NULL),
+(14, 1, 9, 11, 14, '2023-04-15', '2025-03-13');
+
 

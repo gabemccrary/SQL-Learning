@@ -11,7 +11,7 @@ VALUES
 ('Lyric', 'Tarpax', 1, '2017-09-01 09:08:07', 'Super-Earth'),
 ('Kharos', 'Aquila', 0, '2018-03-11 14:23:17', 'Super-Earth'),
 ('Dégron', 'Altair', 1, '2019-12-25 11:14:14', 'Hypherian'),
-('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Lava'),
+('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Terrestrial'),
 ('Gihara', 'Edani', 0, NULL, 'Gas Giant'),
 ('Pelora', 'Androd', 1, '2022-08-09', 'Hypherian'),
 ('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Ice Giant'),
@@ -226,3 +226,4 @@ VALUES
 (12, 10, 10, 12, '2023-01-01', NULL),
 (13, 11, 11, 13, '2023-03-01', NULL),
 (1, 9, 11, 14, '2023-04-15', '2025-03-13');
+

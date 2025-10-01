@@ -15,7 +15,10 @@ VALUES
 ('Gihara', 'Edani', 0, NULL, 'Gas Giant'),
 ('Pelora', 'Androd', 1, '2022-08-09', 'Hypherian'),
 ('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Ice Giant'),
-('Tython', 'Celestia', 1, NULL, 'Terrestrial');
+('Tython', 'Celestia', 1, NULL, 'Terrestrial'),
+('Novara', 'Orion', 1, NULL, 'Terrestrial'),
+('Zerath', 'Draconis', 0, NULL, 'Gas Giant'),
+('Lumina', 'Vega', 1, '2024-01-01', 'Super-Earth');
 
 /*********************
 SHIP
@@ -32,7 +35,10 @@ VALUES
 ('Celestia', 'Borialis', 'TRA', 70, 2020, NULL),
 ('Nova', 'Astera', 'EXP', 130, 2021, NULL),
 ('Forge', 'Eclipse', 'BAT', 250, 2015, NULL),
-('Celestia', 'Comet', 'TRA', 90, 2018, NULL);
+('Celestia', 'Comet', 'TRA', 90, 2018, NULL),
+('StellarWorks', 'Colossus', 'EXP', 600, 2022, NULL),
+('Forge', 'Leviathan', 'BAT', 900, 2020, NULL),
+('Nova', 'Aurora', 'SCI', 450, 2023, NULL);
 
 /*********************
 VOYAGE
@@ -40,17 +46,22 @@ VOYAGE
 INSERT INTO Voyage (shipID, originPlanetID, destinationPlanetID, startDate, endDate, purpose, projectedCost, finalCost)
 VALUES
 (1, 1, 2, '2018-04-01', '2018-04-10', 'Diplomacy', 1200000, 1185000),
-(2, 3, 5, '2019-05-12', '2019-05-20', 'Conflict', 5000000, 5600000),
+(2, 3, 5, '2019-05-12', '2019-05-20', 'Diplomacy', 5000000, 5600000),
 (3, 2, 2, '2020-06-05', '2020-06-15', 'Research', 800000, 750000),
 (4, 4, 1, '2015-07-01', '2015-07-07', 'Trade', 100000, NULL),
-(5, 6, 8, '2021-03-01', NULL, 'Exploration', 600000, NULL),
-(6, 7, 9, '2020-12-01', '2020-12-12', 'Science', 400000, 410000),
-(7, 8, 2, '2022-08-05', '2022-08-18', 'Defense', 750000, 760000),
+(1, 1, 2, '2016-04-01', '2017-04-10', 'Research', 1200000, 1185000),
+(5, 6, 8, '2021-03-01', NULL, 'Resources', 600000, NULL),
+(6, 7, 9, '2020-12-01', '2020-12-12', 'Research', 400000, 410000),
+(7, 8, 2, '2022-08-05', '2022-08-18', 'Diplomacy', 750000, 760000),
 (8, 4, 3, '2021-09-15', NULL, 'Trade', 300000, NULL),
-(5, 11, 12, '2023-01-05', '2023-01-20', 'Exploration', 900000, 910000),
+(1, 1, 2, '2019-04-01', '2021-04-10', 'Trade', 1200000, 1185000),
+(5, 11, 12, '2023-01-05', '2023-01-20', 'Research', 900000, 910000),
 (10, 12, 6, '2019-11-02', '2019-11-10', 'Military', 1200000, 1250000),
-(11, 13, 1, '2023-04-01', NULL, 'Research', 450000, NULL),
-(1, 8, 7, '2022-02-10', '2022-02-20', 'Diplomacy', 500000, 495000);
+(11, 13, 1, '2023-04-01', NULL, 'Resources', 450000, NULL),
+(1, 8, 7, '2022-02-10', '2022-02-20', 'Research', 500000, 495000),
+(14, 14, 15, '2025-03-01', NULL, 'Supplies', 2000000, NULL),
+(15, 15, 16, '2025-05-10', '2025-05-20', 'Military', 5000000, 4800000),
+(16, 16, 14, '2025-06-01', '2025-06-15', 'Research', 750000, 700000);
 
 /*********************
 BIOTYPE
@@ -67,8 +78,9 @@ VALUES
 (9, 'Emberi', 1, 95, 'Fire-resistant humanoids from volcanic regions.', '2020-06-30'),
 (11, 'Peloran', 1, 85, 'Tropic forest dwellers. Excellent hunters.', '2022-08-09'),
 (12, 'Kronan', 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
-(4, 'Wyki', 1, 110, 'Limited technology. Some live on nearby moon.', NULL);
-
+(4, 'Wyki', 1, 110, 'Limited technology. Some live on nearby moon.', NULL),
+(14, 'Zorvian', 0, 120, 'Tentacled amphibians', NULL),
+(15, 'Lumini', 1, 85, 'Radiant humanoids', '2024-02-02');
 /*********************
 INDIVIDUAL
 **********************/
@@ -77,16 +89,18 @@ VALUES
 (1, 1, 'Aurora', 'Sol', '1990-03-11'),
 (3, 3, 'Kina', 'Havok', '1985-09-25'),
 (2, 2, 'Fiova', 'Lahah', NULL),
-(1, 1, 'Carek', 'Tusk', '1988-08-14'),
+(NULL, 1, 'Carek', 'Tusk', '1988-08-14'),
 (4, 4, 'Indaya', 'Phal', '1975-04-20'),
 (3, 3, 'Réxim', 'Torr', NULL),
-(5, 6, 'Sira', 'Nyce', '1992-11-22'),
+(NULL, 6, 'Sira', 'Nyce', '1992-11-22'),
 (6, 7, 'Jericho', 'Nimbus', '1978-01-15'),
 (7, 8, 'Zaría', 'Dune', NULL),
 (8, 9, 'Cruz', 'Quasar', '1983-02-27'),
 (9, 11, 'Vexa', 'Dream', '1999-10-05'),
 (10, 12, 'Gorak', 'Pang', '1990-06-06'),
-(11, 13, 'Lyra', 'Sands', NULL);
+(11, 13, 'Lyra', 'Sands', NULL),
+(NULL, 14, 'Orin', 'Bell', '2000-01-01'),
+(15, 15, 'Luma', 'Bright', '1995-07-07');
 
 /*********************
 ADDRESS
@@ -96,14 +110,14 @@ VALUES
 (42, 'Constellation Blvd', 'Kansas City', 'Missouri', 'USA', 'Earth'),
 (15, 'Twinkle Blvd', 'Veyra', 'High Plains', 'Ekkluvian Union', 'Aurorus'),
 (777, 'Starry Rd', 'Keznar', 'Ashen Ridge', 'Hypherian Clans', 'Achilles'),
-(801, 'Astro Wy', 'Tethys', 'Pelagia', 'Cardan Confederacy', 'Okéanos'),
-(301, 'Stardust Ln', 'Lyricon', 'North Reach', 'Lyrian Syndicate', 'Lyric'),
+(801, 'Astro Wy', 'Tethys', 'Pelagia', 'Orin', 'Okéanos'),
+(301, 'Stardust Ln', 'Lyricon', 'North Reach', 'Luminaria', 'Lyric'),
 (22, 'Cosmic Cir', 'Tharok City', 'Lowlands', 'Tharok Tribes', 'Kharos'),
 (501, 'Asteroid Dr', 'Sandspire', 'Central Flats', 'Veyran Collective', 'Dégron'),
 (66, 'Galaxy Ridge Dr', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cindralis'),
-(123, 'Emerald Ave', 'Pelora Prime', 'Deepwilds', 'Peloran Hunters', 'Pelora'),
-(9, 'Nova St', 'Tyris Hollow', 'Glacier Belt', 'Tyran Packs', 'Xyris'),
-(5, 'Lunar Ln', 'Tython City', 'Desert Zone', 'Tython Confederacy', 'Tython');
+(123, 'Emerald Ave', 'Pelora Prime', 'Deepwilds', 'Peloran States', 'Pelora'),
+(9, 'Nova St', 'Tyris Hollow', 'Glacier Belt', 'Crucis', 'Xyris'),
+(5, 'Lunar Ln', 'Tython City', 'Desert Zone', 'Mak', 'Tython');
 
 /*********************
 CONTACT
@@ -116,10 +130,12 @@ VALUES
 (4, 4, 'carek56@galactic.star', '+1-555-1122'),
 (5, 4, 'indaya.phal@polaris.star', NULL),
 (6, 3, NULL, NULL),
-(7, 5, 'nycel@galactic.nova', '+4-555-7766'),
-(8, 6, 'zaria.dune@collective.star', '+5-555-3344'),
-(9, 7, 'veyra.desert@collective.star', NULL),
-(10, 8, 'cindra.family@alliance.nova', '+3-555-5566');
+(7, 5, 'nyces@galactic.nova', '+4-555-7766'),
+(8, 6, 'jnimbus@collective.star', '+5-555-3344'),
+(9, 7, 'zaria.dune@collective.star', NULL),
+(10, 8, 'quesarc@alliance.nova', '+3-555-5566'),
+(14, 9, 'orin.bell@novara.nova', '+2-555-1122'),
+(15, 10, 'luma.bright@lumini.star', '+2-555-3344');
 
 /*********************
 EVALUATION
@@ -137,7 +153,10 @@ VALUES
 (6, 2, '2018-12-30', 88, 'Science mission completion'),
 (8, 7, '2021-05-14', 90, 'Security maintained during conflict'),
 (13, 1, '2023-04-05', 82, 'Astrophysics mission evaluated'),
-(1, 14, '2023-04-16', 97, 'Excellent collaboration');
+(1, 14, '2023-04-16', 97, 'Excellent collaboration'),
+(14, 1, '2025-07-01', 55, 'Needs improvement'),
+(15, 2, '2025-07-15', 100, 'Outstanding performance'),
+(1, 2, '2025-06-10', 88, 'Steady work');
 
 /*********************
 DISCOVERY
@@ -185,7 +204,8 @@ VALUES
 ('Exploration'),
 ('Logistics'),
 ('Communications'),
-('Research');
+('Research'),
+('Technology');
 
 /*********************
 ROLE
@@ -225,5 +245,7 @@ VALUES
 (11, 9, 5, 7, '2022-04-10', NULL),
 (12, 10, 10, 12, '2023-01-01', NULL),
 (13, 11, 11, 13, '2023-03-01', NULL),
-(1, 9, 11, 14, '2023-04-15', '2025-03-13');
+(1, 9, 11, 14, '2023-04-15', '2025-03-13'),
+(14, 14, 2, NULL, '2025-03-02', NULL),
+(15, 15, 3, NULL, '2025-05-11', NULL);
 

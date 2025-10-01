@@ -16,8 +16,8 @@ VALUES
 ('Pelora', 'Androd', 1, '2022-08-09', 'Hypherian'),
 ('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Ice Giant'),
 ('Tython', 'Celestia', 1, NULL, 'Terrestrial'),
-('Novara', 'Orion', 1, NULL, 'Terrestrial'),
-('Zerath', 'Draconis', 0, NULL, 'Gas Giant'),
+('Novara', 'X38', 1, NULL, 'Terrestrial'),
+('Zerath', 'Draco', 0, NULL, 'Gas Giant'),
 ('Lumina', 'Vega', 1, '2024-01-01', 'Super-Earth');
 
 /*********************
@@ -50,14 +50,14 @@ VALUES
 (3, 2, 2, '2020-06-05', '2020-06-15', 'Research', 800000, 750000),
 (4, 4, 1, '2015-07-01', '2015-07-07', 'Trade', 100000, NULL),
 (1, 1, 2, '2016-04-01', '2017-04-10', 'Research', 1200000, 1185000),
-(5, 6, 8, '2021-03-01', NULL, 'Resources', 600000, NULL),
+(5, 6, 8, '2021-03-01', NULL, 'Supplies', 600000, NULL),
 (6, 7, 9, '2020-12-01', '2020-12-12', 'Research', 400000, 410000),
 (7, 8, 2, '2022-08-05', '2022-08-18', 'Diplomacy', 750000, 760000),
 (8, 4, 3, '2021-09-15', NULL, 'Trade', 300000, NULL),
 (1, 1, 2, '2019-04-01', '2021-04-10', 'Trade', 1200000, 1185000),
 (5, 11, 12, '2023-01-05', '2023-01-20', 'Research', 900000, 910000),
 (10, 12, 6, '2019-11-02', '2019-11-10', 'Military', 1200000, 1250000),
-(11, 13, 1, '2023-04-01', NULL, 'Resources', 450000, NULL),
+(11, 13, 1, '2023-04-01', NULL, 'Supplies', 450000, NULL),
 (1, 8, 7, '2022-02-10', '2022-02-20', 'Research', 500000, 495000),
 (14, 14, 15, '2025-03-01', NULL, 'Supplies', 2000000, NULL),
 (15, 15, 16, '2025-05-10', '2025-05-20', 'Military', 5000000, 4800000),
@@ -80,7 +80,7 @@ VALUES
 (12, 'Kronan', 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
 (4, 'Wyki', 1, 110, 'Limited technology. Some live on nearby moon.', NULL),
 (14, 'Zorvian', 0, 120, 'Tentacled amphibians', NULL),
-(15, 'Lumini', 1, 85, 'Radiant humanoids', '2024-02-02');
+(15, 'Lumini', 1, 85, 'Bioluminescent humanoids', '2024-02-02');
 /*********************
 INDIVIDUAL
 **********************/

@@ -3,22 +3,22 @@ PLANET
 **********************/
 INSERT INTO Planet (name, star, habitable, logDate, description)
 VALUES
-('Earth', 'Sol', 1, NULL, 'Terrestrial'),
-('Aurorus', 'Panthera', 1, '2012-05-14 13:47:08', 'Terrestrial'),
-('Achilles', 'Kadosh', 1, '2013-11-20 10:32:12', 'Terrestrial'),
-('Okéanos', 'Caldrun', 1, '2015-07-07 11:12:13', 'Hypherian'),
-('Zenith', 'Stellar Ridge', 0, '2016-02-12 07:43:23', 'Gas Giant'),
-('Lyric', 'Tarpax', 1, '2017-09-01 09:08:07', 'Super-Earth'),
-('Kharos', 'Aquila', 0, '2018-03-11 14:23:17', 'Super-Earth'),
-('Dégron', 'Altair', 1, '2019-12-25 11:14:14', 'Hypherian'),
-('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Terrestrial'),
-('Gihara', 'Edani', 0, NULL, 'Gas Giant'),
-('Pelora', 'Androd', 1, '2022-08-09', 'Hypherian'),
-('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Ice Giant'),
-('Tython', 'Celestia', 1, NULL, 'Terrestrial'),
-('Novara', 'X38', 1, NULL, 'Terrestrial'),
-('Zerath', 'Draco', 0, NULL, 'Gas Giant'),
-('Lumina', 'Vega', 1, '2024-01-01', 'Super-Earth');
+('Earth', 'Sol', 1, NULL, 'Terrestrial. Complex diversity of ecosystems.'),
+('Aurorus', 'Panthera', 1, '2012-05-14 13:47:08', 'Carbon-rich planet. Mild habitability. Terrestrial.'),
+('Achilles', 'Kadosh', 1, '2013-11-20 10:32:12', 'Desert climate. Low water presence.'),
+('Okéanos', 'Caldrun', 1, '2015-07-07 11:12:13', 'Ocean planet. Deep water mantle. Little exposed landmass.'),
+('Zenith', 'Stellar Ridge', 0, '2016-02-12 07:43:23', 'Luminous gas giant covered in storms caused by axial rotation speed.'),
+('Lyric', 'Tarpax', 1, '2017-09-01 09:08:07', 'Rocky super-Earth with iron-rich core and thin atmosphere.'),
+('Kharos', 'Aquila', 0, '2018-03-11 14:23:17', 'Former rogue planet stabilized by gravitational capture.'),
+('Dégron', 'Altair', 1, '2019-12-25 11:14:14', 'Volatile ocean activity caused by two moons.'),
+('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Large amount of tectonic activity. Skies appear pink due to orange star.'),
+('Gihara', 'Edani', 0, NULL, 'Gas giant. Other features unknown.'),
+('Pelora', 'Androd', 1, '2022-08-09 14:28:37', '85% of surface is water. Single, exposed tropical landmass.'),
+('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Majority of landmasses are ice-covered. Volcanic vents sustain hidden ecosystems beneath the surface.'),
+('Tython', 'Celestia', 1, NULL, 'High-gravity. Dense atmosphere. 30% of surface is water.'),
+('Novara', 'X38', 1, NULL, 'Earth-like. Bioluminescent flora.'),
+('Zerath', 'Draco', 0, NULL, 'Gas giant. Strong magnetic field.'),
+('Lumina', 'Vega', 1, '2024-01-01 18:23:57', 'Super-Earth. Extreme temperatures.');
 
 /*********************
 SHIP
@@ -32,7 +32,7 @@ VALUES
 ('AstroWorks', 'Expanse', 'EXP', 100, 2017, NULL),
 ('Voyager', 'Pioneer', 'SCI', 50, 2018, NULL),
 ('Forge', 'Titan', 'BAT', 400, 2019, NULL),
-('Celestia', 'Borialis', 'TRA', 70, 2020, NULL),
+('Celestia', 'Borealis', 'TRA', 70, 2020, NULL),
 ('Nova', 'Astera', 'EXP', 130, 2021, NULL),
 ('Forge', 'Eclipse', 'BAT', 250, 2015, NULL),
 ('Celestia', 'Comet', 'TRA', 90, 2018, NULL),
@@ -45,42 +45,43 @@ VOYAGE
 **********************/
 INSERT INTO Voyage (shipID, originPlanetID, destinationPlanetID, startDate, endDate, purpose, projectedCost, finalCost)
 VALUES
-(1, 1, 2, '2018-04-01', '2018-04-10', 'Diplomacy', 1200000, 1185000),
-(2, 3, 5, '2019-05-12', '2019-05-20', 'Diplomacy', 5000000, 5600000),
-(3, 2, 2, '2020-06-05', '2020-06-15', 'Research', 800000, 750000),
-(4, 4, 1, '2015-07-01', '2015-07-07', 'Trade', 100000, NULL),
+(1, 1, 2, '2018-04-01', '2020-04-10', 'Diplomacy', 1200000, 1185000),
+(2, 3, 5, '2019-05-12', '2021-05-20', 'Diplomacy', 5000000, 5600000),
+(3, 2, 2, '2020-06-05', '2021-06-15', 'Research', 800000, 750000),
+(4, 4, 1, '2014-07-01', '2015-07-07', 'Trade', 100000, NULL),
 (1, 1, 2, '2016-04-01', '2017-04-10', 'Research', 1200000, 1185000),
 (5, 6, 8, '2021-03-01', NULL, 'Supplies', 600000, NULL),
-(6, 7, 9, '2020-12-01', '2020-12-12', 'Research', 400000, 410000),
-(7, 8, 2, '2022-08-05', '2022-08-18', 'Diplomacy', 750000, 760000),
+(6, 7, 9, '2020-12-01', '2022-12-12', 'Research', 400000, 410000),
+(7, 8, 2, '2021-08-05', '2022-08-18', 'Diplomacy', 750000, 760000),
 (8, 4, 3, '2021-09-15', NULL, 'Trade', 300000, NULL),
 (1, 1, 2, '2019-04-01', '2021-04-10', 'Trade', 1200000, 1185000),
-(5, 11, 12, '2023-01-05', '2023-01-20', 'Research', 900000, 910000),
-(10, 12, 6, '2019-11-02', '2019-11-10', 'Military', 1200000, 1250000),
+(5, 11, 12, '2022-01-05', '2023-01-20', 'Research', 900000, 910000),
+(10, 12, 6, '2017-11-02', '2019-11-10', 'Military', 1200000, 1250000),
 (11, 13, 1, '2023-04-01', NULL, 'Supplies', 450000, NULL),
-(1, 8, 7, '2022-02-10', '2022-02-20', 'Research', 500000, 495000),
+(1, 8, 7, '2022-02-10', '2023-02-20', 'Research', 500000, 495000),
 (14, 14, 15, '2025-03-01', NULL, 'Supplies', 2000000, NULL),
-(15, 15, 16, '2025-05-10', '2025-05-20', 'Military', 5000000, 4800000),
-(16, 16, 14, '2025-06-01', '2025-06-15', 'Research', 750000, 700000);
+(15, 15, 16, '2024-05-10', '2025-05-20', 'Military', 5000000, 4800000),
+(16, 16, 14, '2023-06-01', '2025-06-15', 'Research', 750000, 700000);
 
 /*********************
 BIOTYPE
 **********************/
 INSERT INTO Biotype (homePlanetID, name, sapient, averageLifespan, description, firstContact)
 VALUES
-(1, 'Human', 1, 90, 'Adaptive and curious.', NULL),
-(2, 'Ekkluvian', 1, 150, 'Advanced technology. Bioluminescent beings.', '2012-05-14'),
-(3, 'Cardan', 1, 120, 'Metachrosis. Humanoid.', '2013-11-20'),
-(4, 'Aquani', 0, 200, 'Amphibious ocean dwellers.', '2015-07-07'),
-(6, 'Lyrian', 1, 100, 'Telepathic after age 45. Humanoids.', '2017-09-01'),
-(3, 'Khari', 0, 80, 'Geo-biology. Nomadic. Radiation resistance.', '2018-03-11'),
-(13, 'Veyran', 1, 70, 'Tall desert dwellers. Honor-shame culture.', NULL),
-(9, 'Emberi', 1, 95, 'Fire-resistant humanoids from volcanic regions.', '2020-06-30'),
-(11, 'Peloran', 1, 85, 'Tropic forest dwellers. Excellent hunters.', '2022-08-09'),
-(12, 'Kronan', 0, 50, 'Skeptical of outsiders. Not much is known.', '2023-01-19'),
-(4, 'Wyki', 1, 110, 'Limited technology. Some live on nearby moon.', NULL),
-(14, 'Zorvian', 0, 120, 'Tentacled amphibians', NULL),
-(15, 'Lumini', 1, 85, 'Bioluminescent humanoids', '2024-02-02');
+(1, 'Human', 1, 90, 'Bipedal. High neural plasticity.', NULL),
+(2, 'Ekkluvian', 1, 150, 'Bioluminescent skin. Nocturnal vision.', '2012-05-14'),
+(3, 'Chame', 1, 120, 'Chromatophores enable rapid color change.', '2013-11-20'),
+(4, 'Aquani', 0, 200, 'Gilled vertebrates. Dual aquatic–terrestrial respiration.', '2015-07-07'),
+(6, 'Lyrian', 1, 100, 'Humanoid morphology. Telepathic abilities that begin at age 45.', '2017-09-01'),
+(3, 'Khari', 0, 80, 'Skin has geode-like appearance. Cellular resistance to radiation.', '2018-03-11'),
+(13, 'Veyran', 1, 70, 'Elongated limbs. Humanoids adapted for arid, high-solar environments.', NULL),
+(9, 'Emberi', 1, 95, 'Thermoresistant to volcanic heat.', '2020-06-30'),
+(11, 'Peloran', 1, 85, 'Strong musculature. Arboreal adaptations.', '2022-08-09'),
+(12, 'Kronan', 0, 50, 'Feline morphology. Large. High fast-twitch muscle density.', '2023-01-19'),
+(4, 'Wyki', 1, 110, 'Small-bodied bipeds.', NULL),
+(14, 'Zorvian', 0, 120, 'Tentacled amphibians with fragile exoskeleton.', NULL),
+(15, 'Lumini', 1, 85, 'Bioluminescent skin. Cold-blooded metabolism.', '2024-02-02');
+
 /*********************
 INDIVIDUAL
 **********************/
@@ -248,4 +249,5 @@ VALUES
 (1, 9, 11, 14, '2023-04-15', '2025-03-13'),
 (14, 14, 2, NULL, '2025-03-02', NULL),
 (15, 15, 3, NULL, '2025-05-11', NULL);
+
 

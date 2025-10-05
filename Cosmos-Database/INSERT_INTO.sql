@@ -6,14 +6,14 @@ VALUES
 ('Earth', 'Sun', 1, NULL, 'Terrestrial. Complex diversity of ecosystems.'),
 ('Aurorus', 'Panthera', 1, '2022-05-14 13:47:08', 'Carbon-rich planet. Mild habitability. Terrestrial.'),
 ('Achilles', 'Kadosh', 1, '2023-11-20 10:32:12', 'Desert climate. Low water presence.'),
-('Okéanos', 'Caldrun', 1, '2025-07-07 11:12:13', 'Ocean planet. Deep water mantle. Little exposed landmass.'),
+('Okéanos', 'Caldrun', 1, '2025-07-07 11:12:13', '85% of surface is water. Single, exposed tropical landmass.'),
 ('Zenith', 'Lux', 0, '2020-02-12 07:43:23', 'Luminous gas giant covered in storms caused by axial rotation speed.'),
 ('Lyric', 'Pax', 1, '2022-09-01 09:08:07', 'Rocky super-Earth with iron-rich core and thin atmosphere.'),
 ('Kharos', 'Aquila', 0, '2021-03-11 14:23:17', 'Former rogue planet stabilized by gravitational capture.'),
 ('Dégron', 'Altair', 1, '2020-12-25 11:14:14', 'Volatile ocean activity caused by two moons.'),
 ('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Large amount of tectonic activity. Skies appear pink due to orange star.'),
 ('Gihara', 'Edani', 0, NULL, 'Gas giant. Other features unknown.'),
-('Pelora', 'Androd', 1, '2022-08-09 14:28:37', '85% of surface is water. Single, exposed tropical landmass.'),
+('Pelora', 'Androd', 1, '2022-08-09 14:28:37', 'Relatively small. Large polar ice caps and deserts.'),
 ('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Majority of landmasses are ice-covered. Volcanic vents sustain hidden ecosystems beneath the surface.'),
 ('Tython', 'Celestia', 1, NULL, 'High-gravity. Dense atmosphere. 30% of surface is water.'),
 ('Novara', 'X38', 1, NULL, 'Earth-like. Bioluminescent flora.'),
@@ -252,6 +252,7 @@ VALUES
 (1, 9, 11, 14, '2023-04-15', '2025-03-13'),
 (14, 14, 2, NULL, '2025-03-02', NULL),
 (15, 14, 3, NULL, '2025-05-11', NULL);
+
 
 
 

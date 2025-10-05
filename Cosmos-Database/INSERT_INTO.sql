@@ -12,12 +12,12 @@ VALUES
 ('Kharos', 'Aquila', 0, '2021-03-11 14:23:17', 'Former rogue planet stabilized by gravitational capture.'),
 ('Dégron', 'Altair', 1, '2020-12-25 11:14:14', 'Volatile ocean activity caused by two moons.'),
 ('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Large amount of tectonic activity. Skies appear pink due to orange star.'),
-('Gihara', 'Edani', 0, NULL, 'Gas giant. Other features unknown.'),
+('Gihara', 'Edani', 0, '2020-12-25 11:14:14', 'Gas giant. Other features unknown.'),
 ('Pelora', 'Androd', 1, '2022-08-09 14:28:37', 'Relatively small. Large polar ice caps and deserts.'),
 ('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Majority of landmasses are ice-covered. Volcanic vents sustain hidden ecosystems beneath the surface.'),
-('Tython', 'Celestia', 1, NULL, 'High-gravity. Dense atmosphere. 30% of surface is water.'),
-('Novara', 'X38', 1, NULL, 'Earth-like. Bioluminescent flora.'),
-('Zerath', 'Draco', 0, NULL, 'Gas giant. Strong magnetic field.'),
+('Tython', 'Celestia', 1, '2021-03-25 20:11:14', 'High-gravity. Dense atmosphere. 30% of surface is water.'),
+('Novara', 'X38', 1, '2022-01-02 23:17:32', 'Earth-like. Bioluminescent flora.'),
+('Zerath', 'Draco', 0, '2021-10-25 16:14:14', 'Gas giant. Strong magnetic field.'),
 ('Lumina', 'Vega', 1, '2024-01-01 18:23:57', 'Super-Earth. Extreme temperatures.');
 
 /*********************
@@ -27,11 +27,11 @@ INSERT INTO Ship (manufacturer, model, shipClass, capacity, startYear, endYear)
 VALUES
 ('Nova', 'Velox (N-25120)', 'EXP', 120, 2022, NULL),
 ('Forge', 'Infinitum (F-12300)', 'BAT', 300, 2020, 2025),
-('Nova', 'Polaris (N-18080)', 'SCI', 80, 2018, NULL),
-('The Guild', 'Crimson Scepter (G-10060)', 'TRA', 60, 2019, 2024),
-('AstroWorks', 'Expanse (A-17100)', 'EXP', 100, 2020, NULL),
+('Nova', 'Polaris (N-18080)', 'SCI', 80, 2021, NULL),
+('The Guild', 'Crimson Scepter (G-10060)', 'TRA', 60, 2020, 2024),
+('AstroWorks', 'Expanse (A-17100)', 'EXP', 100, 2021, NULL),
 ('Voyager', 'Pioneer (V-18050)', 'SCI', 50, 2021, NULL),
-('Forge', 'Titan (F-19400)', 'BAT', 400, 2019, NULL),
+('Forge', 'Titan (F-19400)', 'BAT', 400, 2020, NULL),
 ('Celestia', 'Borealis (C-30070)', 'TRA', 70, 2020, NULL),
 ('Nova', 'Astera (N-21130)', 'EXP', 130, 2021, NULL),
 ('Forge', 'Eclipse (F-15250)', 'BAT', 250, 2025, NULL),
@@ -48,13 +48,13 @@ VALUES
 (12, 1, 2, '2020-04-01', '2020-06-10', 'Diplomacy', 1200000, 1185000),
 (2, 3, 5, '2021-05-12', '2021-07-20', 'Diplomacy', 5000000, 5600000),
 (3, 2, 2, '2020-07-05', '2021-01-15', 'Research', 800000, 750000),
-(4, 4, 1, '2024-02-01', '2024-07-07', 'Trade', 100000, NULL),
+(4, 4, 1, '2024-02-01', 'NULL', 'Trade', 100000, NULL),
 (1, 1, 2, '2024-04-01', '2024-07-10', 'Research', 1200000, 1185000),
 (5, 6, 8, '2025-03-01', NULL, 'Supplies', 600000, NULL),
-(6, 7, 9, '2020-12-01', '2022-12-12', 'Research', 400000, 410000),
-(7, 8, 2, '2021-08-05', '2022-08-18', 'Diplomacy', 750000, 760000),
+(6, 7, 9, '2021-12-01', '2022-02-12', 'Research', 400000, 410000),
+(7, 8, 2, '2021-08-05', '2021-12-18', 'Diplomacy', 750000, 760000),
 (8, 4, 3, '2025-09-15', NULL, 'Trade', 300000, NULL),
-(1, 1, 2, '2019-04-01', '2021-04-10', 'Trade', 1200000, 1185000),
+(1, 1, 2, '2021-04-01', '2021-07-10', 'Trade', 1200000, 1185000),
 (5, 11, 12, '2022-01-05', '2023-01-20', 'Research', 900000, 910000),
 (10, 12, 6, '2020-11-02', '2021-01-10', 'Military', 1200000, 1250000),
 (11, 13, 1, '2025-04-01', NULL, 'Supplies', 450000, NULL),
@@ -72,13 +72,13 @@ BIOTYPE
 INSERT INTO Biotype (homePlanetID, name, sapient, averageLifespan, description, firstContact)
 VALUES
 (1, 'Human', 1, 90, 'Bipedal. High neural plasticity.', NULL),
-(2, 'Ekkluvian', 1, 150, 'Bioluminescent skin. Nocturnal vision.', '2012-05-14'),
-(3, 'Chame', 1, 120, 'Chromatophores enable rapid color change.', '2013-11-20'),
-(4, 'Aquani', 0, 200, 'Gilled vertebrates. Dual aquatic–terrestrial respiration.', '2015-07-07'),
-(6, 'Lyrian', 1, 100, 'Humanoid morphology. Telepathic abilities that begin at age 45.', '2017-09-01'),
-(3, 'Khari', 0, 80, 'Skin has geode-like appearance. Cellular resistance to radiation.', '2018-03-11'),
+(2, 'Ekkluvian', 1, 150, 'Bioluminescent skin. Nocturnal vision.', '2022-05-14'),
+(3, 'Chame', 1, 120, 'Chromatophores enable rapid color change.', '2023-11-20'),
+(4, 'Aquani', 0, 200, 'Gilled vertebrates. Dual aquatic–terrestrial respiration.', '2025-07-07'),
+(6, 'Lyrian', 1, 100, 'Humanoid morphology. Telepathic abilities that begin at age 45.', '2022-09-01'),
+(3, 'Khari', 0, 80, 'Skin has geode-like appearance. Cellular resistance to radiation.', '2023-03-11'),
 (13, 'Veyran', 1, 70, 'Elongated limbs. Humanoids adapted for arid, high-solar environments.', NULL),
-(9, 'Emberi', 1, 95, 'Thermoresistant to volcanic heat.', '2020-06-30'),
+(9, 'Emberi', 1, 95, 'Thermoresistant to volcanic heat.', '2021-06-30'),
 (11, 'Peloran', 1, 85, 'Strong musculature. Arboreal adaptations.', '2022-08-09'),
 (12, 'Kronan', 0, 50, 'Feline morphology. Large. High fast-twitch muscle density.', '2023-01-19'),
 (4, 'Wyki', 1, 110, 'Small-bodied bipeds.', NULL),
@@ -252,6 +252,7 @@ VALUES
 (1, 9, 11, 14, '2023-04-15', '2025-03-13'),
 (14, 14, 2, NULL, '2025-03-02', NULL),
 (15, 14, 3, NULL, '2025-05-11', NULL);
+
 
 
 

@@ -28,7 +28,7 @@ VALUES
 ('Nova', 'Velox (N-25120)', 'EXP', 120, 2022, NULL),
 ('Forge', 'Infinitum (F-12300)', 'BAT', 300, 2020, 2025),
 ('Nova', 'Polaris (N-18080)', 'SCI', 80, 2018, NULL),
-('The Guild', 'Crimson Scepter (G-10060', 'TRA', 60, 2019, 2024),
+('The Guild', 'Crimson Scepter (G-10060)', 'TRA', 60, 2019, 2024),
 ('AstroWorks', 'Expanse (A-17100)', 'EXP', 100, 2020, NULL),
 ('Voyager', 'Pioneer (V-18050)', 'SCI', 50, 2021, NULL),
 ('Forge', 'Titan (F-19400)', 'BAT', 400, 2019, NULL),
@@ -118,7 +118,7 @@ VALUES
 (301, 'Stardust Ln', 'Lyricon', 'North Reach', 'Luminaria', 'Lyric'),
 (22, 'Cosmic Cir', 'Tharok City', 'Lowlands', 'Tharok Tribes', 'Kharos'),
 (501, 'Asteroid Dr', 'Sandspire', 'Central Flats', 'Veyran Collective', 'Dégron'),
-(66, 'Galaxy Ridge Dr', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cindralis'),
+(66, 'Galaxy Ridge Dr', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cinbrali'),
 (123, 'Emerald Ave', 'Pelora Prime', 'Deepwilds', 'Peloran States', 'Pelora'),
 (9, 'Nova St', 'Tyris Hollow', 'Glacier Belt', 'Crucis', 'Xyris'),
 (5, 'Lunar Ln', 'Tython City', 'Desert Zone', 'Mak', 'Tython');
@@ -135,11 +135,11 @@ VALUES
 (5, 4, 'indaya.phal@polaris.star', NULL),
 (6, 3, NULL, NULL),
 (7, 5, 'nyces@galactic.nova', '+4-555-7766'),
-(8, 6, 'jnimbus@collective.star', '+5-555-3344'),
-(9, 7, 'zaria.dune@collective.star', NULL),
-(10, 8, 'quesarc@alliance.nova', '+3-555-5566'),
-(14, 9, 'orin.bell@novara.nova', '+2-555-1122'),
-(15, 10, 'luma.bright@lumini.star', '+2-555-3344');
+(8, 6, 'jnimbus@polaris.star', '+5-555-3344'),
+(9, 7, 'zaria.dune@galactic.star', NULL),
+(10, 8, 'quesarc@stellar.nova', '+3-555-5566'),
+(14, 9, 'orin.bell@stellar.nova', '+2-555-1122'),
+(15, 10, 'luma.bright@galactic.star', '+2-555-3344');
 
 /*********************
 EVALUATION
@@ -251,7 +251,8 @@ VALUES
 (13, 11, 11, 13, '2023-03-01', NULL),
 (1, 9, 11, 14, '2023-04-15', '2025-03-13'),
 (14, 14, 2, NULL, '2025-03-02', NULL),
-(15, 15, 3, NULL, '2025-05-11', NULL);
+(15, 14, 3, NULL, '2025-05-11', NULL);
+
 
 
 

@@ -35,7 +35,7 @@ VALUES
 ('Celestia', 'Borealis (C-30070)', 'TRA', 70, 2020, NULL),
 ('Nova', 'Astera (N-21130)', 'EXP', 130, 2021, NULL),
 ('Forge', 'Eclipse (F-15250)', 'BAT', 250, 2025, NULL),
-('Celestia', 'Comet IV (C-18090)', 'TRA', 90, 2022, NULL),
+('Celestia', 'Comet IV (C-18090)', 'TRA', 90, 2020, NULL),
 ('StellarWorks', 'Colossus (S-22600)', 'EXP', 600, 2022, NULL),
 ('Forge', 'Leviathan (F-20900)', 'BAT', 900, 2020, NULL),
 ('Nova', 'Aurora (N-23450)', 'SCI', 450, 2023, NULL);
@@ -45,23 +45,23 @@ VOYAGE
 **********************/
 INSERT INTO Voyage (shipID, originPlanetID, destinationPlanetID, startDate, endDate, purpose, projectedCost, finalCost)
 VALUES
-(12, 1, 2, '2020-04-01', '2020-06-10', 'Diplomacy', 1200000, 1185000),
+(12, 1, 2, '2023-04-01', '2023-06-10', 'Diplomacy', 1200000, 1185000),
 (2, 3, 5, '2021-05-12', '2021-07-20', 'Diplomacy', 5000000, 5600000),
-(3, 2, 2, '2020-07-05', '2021-01-15', 'Research', 800000, 750000),
+(3, 2, 2, '2021-07-05', '2022-01-15', 'Research', 800000, 750000),
 (4, 4, 1, '2024-02-01', 'NULL', 'Trade', 100000, NULL),
 (1, 1, 2, '2024-04-01', '2024-07-10', 'Research', 1200000, 1185000),
 (5, 6, 8, '2025-03-01', NULL, 'Supplies', 600000, NULL),
 (6, 7, 9, '2021-12-01', '2022-02-12', 'Research', 400000, 410000),
 (7, 8, 2, '2021-08-05', '2021-12-18', 'Diplomacy', 750000, 760000),
 (8, 4, 3, '2025-09-15', NULL, 'Trade', 300000, NULL),
-(1, 1, 2, '2021-04-01', '2021-07-10', 'Trade', 1200000, 1185000),
+(1, 1, 2, '2022-04-01', '2022-07-10', 'Trade', 1200000, 1185000),
 (5, 11, 12, '2022-01-05', '2023-01-20', 'Research', 900000, 910000),
 (10, 12, 6, '2020-11-02', '2021-01-10', 'Military', 1200000, 1250000),
 (11, 13, 1, '2025-04-01', NULL, 'Supplies', 450000, NULL),
 (1, 8, 7, '2022-02-10', '2023-02-20', 'Research', 500000, 495000),
 (14, 14, 15, '2025-08-13', NULL, 'Supplies', 2000000, NULL),
-(15, 15, 16, '2024-05-10', '2025-05-20', 'Military', 5000000, 4800000),
-(16, 16, 14, '2023-06-01', '2025-06-15', 'Research', 750000, 700000),
+(8, 15, 16, '2024-05-10', '2025-05-20', 'Military', 5000000, 4800000),
+(6, 16, 14, '2023-06-01', '2025-06-15', 'Research', 750000, 700000),
 (1, 2, 3, '2024-01-05', '2024-02-02', 'Diplomacy', 1200000, 1150000),
 (6, 3, 4, '2024-03-10', '2024-03-25', 'Research', 800000, 790000),
 (1, 5, 2, '2024-04-01', '2024-05-01', 'Research', 2000000, 1985000);
@@ -73,16 +73,16 @@ INSERT INTO Biotype (homePlanetID, name, sapient, averageLifespan, description, 
 VALUES
 (1, 'Human', 1, 90, 'Bipedal. High neural plasticity.', NULL),
 (2, 'Ekkluvian', 1, 150, 'Bioluminescent skin. Nocturnal vision.', '2022-05-14'),
-(3, 'Chame', 1, 120, 'Chromatophores enable rapid color change.', '2023-11-20'),
+(14, 'Chame', 1, 120, 'Chromatophores enable rapid color change.', '2023-11-20'),
 (4, 'Aquani', 0, 200, 'Gilled vertebrates. Dual aquatic–terrestrial respiration.', '2025-07-07'),
 (6, 'Lyrian', 1, 100, 'Humanoid morphology. Telepathic abilities that begin at age 45.', '2022-09-01'),
-(3, 'Khari', 0, 80, 'Skin has geode-like appearance. Cellular resistance to radiation.', '2023-03-11'),
-(13, 'Veyran', 1, 70, 'Elongated limbs. Humanoids adapted for arid, high-solar environments.', NULL),
+(3, 'Khari', 0, 80, 'Skin has geode-like appearance. Cellular resistance to radiation.', '2024-03-11'),
+(3, 'Veyran', 1, 70, 'Elongated limbs. Humanoids adapted for arid, high-solar environments.', '2023-11-20'),
 (9, 'Emberi', 1, 95, 'Thermoresistant to volcanic heat.', '2021-06-30'),
 (11, 'Peloran', 1, 85, 'Strong musculature. Arboreal adaptations.', '2022-08-09'),
 (12, 'Kronan', 0, 50, 'Feline morphology. Large. High fast-twitch muscle density.', '2023-01-19'),
-(4, 'Wyki', 1, 110, 'Small-bodied bipeds.', NULL),
-(14, 'Zorvian', 0, 120, 'Tentacled amphibians with fragile exoskeleton.', NULL),
+(14, 'Wyki', 1, 110, 'Small-bodied bipeds.', '2025-07-07'),
+(NULL, 'Zorvian', 0, 120, 'Tentacled amphibians with fragile exoskeleton.', NULL),
 (15, 'Lumini', 1, 85, 'Bioluminescent skin. Cold-blooded metabolism.', '2024-02-02');
 
 /*********************
@@ -104,7 +104,12 @@ VALUES
 (10, 12, 'Gorak', 'Pang', '1990-06-06'),
 (11, 13, 'Lyra', 'Sands', NULL),
 (NULL, 14, 'Orin', 'Bell', '2000-01-01'),
-(15, 15, 'Luma', 'Bright', '1995-07-07');
+(15, 15, 'Luma', 'Bright', '1995-07-07'),
+(NULL, 2, 'Heaven', 'Pax', '1993-07-21'),
+(5, 5, 'Simini', 'Korr', '1987-11-12'),
+(NULL, 8, 'Kona', 'Invictus', NULL),
+(12, 12, 'Ryndon', 'Pangi', '1991-03-15'),
+(NULL, 14, 'Lumi', 'Zect', '1994-09-09');
 
 /*********************
 ADDRESS
@@ -146,51 +151,52 @@ EVALUATION
 **********************/
 INSERT INTO Evaluation (individualID, evaluatorID, evalDate, score, notes)
 VALUES
-(1, 5, '2018-04-11', 95, 'Excellent leadership during negotiations'),
-(4, 1, '2018-04-12', 88, 'Kept ship systems stable under stress'),
-(2, 6, '2019-05-21', 70, 'Aggressive tactics, mixed results'),
-(3, 5, '2020-06-16', 99, NULL),
-(7, 8, '2021-07-10', 85, 'Exploration efficiency outstanding'),
-(9, 10, '2022-01-05', 60, NULL),
-(11, 12, '2023-04-20', 92, 'Trade negotiations successful'),
-(5, 3, '2019-08-12', 78, NULL),
-(6, 2, '2018-12-30', 88, 'Science mission completion'),
-(8, 7, '2021-05-14', 90, 'Security maintained during conflict'),
-(13, 1, '2023-04-05', 82, 'Astrophysics mission evaluated'),
-(1, 14, '2023-04-16', 97, 'Excellent collaboration'),
-(14, 1, '2025-07-01', 55, 'Needs improvement'),
-(15, 2, '2025-07-15', 100, 'Outstanding performance'),
-(1, 2, '2025-06-10', 88, 'Steady work');
+(1, 5, '2022-05-01', 95, 'Excellent leadership during early research missions'),
+(4, 1, '2022-08-10', 88, 'Kept ship systems stable under stress'),
+(2, 7, '2020-06-15', 70, 'Aggressive tactics, mixed results'),
+(3, 6, '2021-08-01', 99, 'Outstanding scientific analysis'),
+(7, 8, '2022-09-12', 85, 'Exploration efficiency outstanding'),
+(9, 10, '2021-05-20', 60, 'Observation and reconnaissance evaluated'),
+(11, 12, '2025-05-10', 92, 'Research mission successfully completed'),
+(5, 3, '2021-11-05', 78, 'Exobiology fieldwork well conducted'),
+(6, 2, '2021-01-20', 88, 'Astronomy mission completion'),
+(8, 7, '2021-12-15', 90, 'Security maintained during exploration'),
+(13, 11, '2023-04-10', 82, 'Astrophysics mission evaluated'),
+(1, 14, '2023-10-01', 97, 'Excellent collaboration on crew coordination'),
+(14, 2, '2023-05-20', 55, 'Needs improvement in technical duties'),
+(15, 2, '2023-12-05', 100, 'Outstanding performance in research'),
+(1, 2, '2023-06-15', 88, 'Steady work in command operations');
 
 /*********************
 DISCOVERY
 **********************/
 INSERT INTO Discovery (loggerID, voyageID, discoveryType, description, logDate)
 VALUES
-(1, 1, 'Flora', 'New plant Kindred', '2018-04-05'),
-(2, 2, 'Fauna', NULL, '2019-05-15'),
-(3, 3, 'Geology', 'New tectonic activity', '2020-06-10'),
-(4, 4, 'Oceanography', NULL, '2015-07-05'),
-(5, 5, 'Exobiology', 'Ice-adapted insects', '2021-03-05'),
-(6, 6, 'Astronomy', 'New moon mapped', '2020-12-05'),
+(6, 1, 'Astronomy', 'New plant Kindred', '2022-04-02'),
+(2, 2, 'Fauna', NULL, '2021-05-13'),
+(3, 3, 'Geology', 'New tectonic activity', '2021-07-06'),
+(4, 4, 'Oceanography', NULL, '2024-02-02'),
+(5, 5, 'Exobiology', 'Ice-adapted insects', '2025-03-02'),
+(6, 6, 'Astronomy', 'New moon mapped', '2021-12-02'),
 (7, 7, 'Defense', NULL, '2022-08-10'),
-(8, 8, 'Trade', 'Dark market trading routes', '2021-09-18'),
-(9, 9, 'Exploration', NULL, '2023-01-10'),
-(10, 10, 'Astronomy', 'Dark matter disturbance', '2019-11-05'),
-(11, 11, 'Research', 'Ancient artifact discovered', '2023-04-02'),
+(1, 7, 'Trade', 'Dark market trading routes', '2025-09-16'),
+(9, 9, 'Exploration', NULL, '2021-04-02'),
+(10, 10, 'Astronomy', 'Dark matter disturbance', '2020-11-03'),
+(11, 11, 'Research', 'Ancient artifact discovered', '2025-04-02'),
 (12, 12, 'Science', NULL, '2022-02-15');
+
 
 /*********************
 CONFLICT
 **********************/
 INSERT INTO Conflict (voyageID, name, startDate, endDate, description, outcome)
 VALUES
-(2, 'Battle of Kenzana', '2019-05-20', NULL, 'Major fleet engagement near the gas giant.', 'Treaty'),
+(2, 'Battle of Kenzana', '2021-05-13', NULL, 'Major fleet engagement near the gas giant.', 'Treaty'),
 (7, 'Lyzikan War', '2022-08-05', '2022-08-18', 'Conflict between colonies', NULL),
-(10, 'Xy Skirmish', '2019-11-03', '2019-11-10', NULL, 'Victory'),
-(5, 'Tundric Stand-off', '2021-03-05', NULL, 'Diplomatic standoff with natives', NULL),
-(8, 'Aurorus Trade Dispute', '2021-09-15', '2021-09-18', NULL, NULL),
-(11, 'Tython Clash', '2023-04-03', NULL, 'Encounter with nomadic tribes', 'Resolved'),
+(10, 'Xy Skirmish', '2020-11-03', '2020-11-10', NULL, 'Victory'),
+(5, 'Tundric Stand-off', '2025-03-02', NULL, 'Diplomatic standoff with natives', NULL),
+(8, 'Aurorus Trade Dispute', '2025-09-16', '2025-09-18', NULL, NULL),
+(11, 'Tython Clash', '2025-04-02', NULL, 'Encounter with nomadic tribes', 'Resolved'),
 (12, 'Dégron Mining Dispute', '2022-02-12', '2022-02-20', NULL, 'Settlement');
 
 /*********************
@@ -205,7 +211,7 @@ VALUES
 ('Medical'),
 ('Security'),
 ('Trade'),
-('Exploration'),
+('Nutrition'),
 ('Logistics'),
 ('Communications'),
 ('Research'),
@@ -225,33 +231,34 @@ VALUES
 (5, 'Doctor'),
 (6, 'Security Officer'),
 (7, 'Trader'),
-(8, 'Explorer'),
+(8, 'Chef'),
 (9, 'Mechanic'),
 (10, 'Comms Specialist'),
-(11, 'Astrophysicist'),
-(11, 'Systems Analyst');
+(3, 'Astrophysicist'),
+(12, 'Systems Analyst');
 
 /*********************
 CREW MEMBER
 **********************/
 INSERT INTO CrewMember (individualID, shipID, departmentID, roleID, startDate, endDate)
 VALUES
-(1, 1, 1, 1, '2015-01-01', NULL),
-(4, 1, 2, 2, '2016-03-10', NULL),
-(3, 3, 2, 2, '2019-06-01', NULL),
-(5, 3, 4, 4, '2019-06-01', NULL),
-(2, 2, 3, 6, '2012-05-01', NULL),
-(6, 2, 3, 5, '2013-07-15', '2020-05-12'),
-(7, 5, 8, 10, '2020-06-01', NULL),
-(8, 6, 6, 8, '2019-02-14', NULL),
-(9, 7, 3, 3, '2020-09-01', NULL),
-(10, 8, 7, 9, '2021-11-20', NULL),
-(11, 9, 5, 7, '2022-04-10', NULL),
-(12, 10, 10, 12, '2023-01-01', NULL),
-(13, 11, 11, 13, '2023-03-01', NULL),
-(1, 9, 11, 14, '2023-04-15', '2025-03-13'),
-(14, 14, 2, NULL, '2025-03-02', NULL),
-(15, 14, 3, NULL, '2025-05-11', NULL);
+(1, 1, 1, 1, '2022-02-15', NULL),
+(4, 1, 2, 2, '2022-06-10', NULL),
+(3, 3, 3, 3, '2021-03-20', NULL),
+(5, 3, 3, 5, '2021-09-12', NULL),
+(2, 2, 7, 7, '2020-04-01', NULL),
+(6, 2, 3, 13, '2020-08-15', '2021-12-31'),
+(7, 5, 8, 10, '2021-05-05', NULL),
+(8, 6, 6, 8, '2021-09-01', NULL),
+(9, 7, 3, 3, '2020-11-20', NULL),
+(10, 8, 7, 9, '2021-12-10', NULL),
+(11, 9, 3, 13, '2022-05-01', NULL),
+(12, 10, 12, 12, '2025-06-15', NULL),
+(13, 11, 3, 3, '2023-03-10', NULL),
+(1, 9, 3, 3, '2023-09-01', '2025-03-13'),
+(14, 14, 2, 2, '2023-04-20', NULL),
+(15, 14, 3, 5, '2023-11-05', NULL);
+
 
 
 

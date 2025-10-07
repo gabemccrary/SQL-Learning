@@ -3,22 +3,23 @@ PLANET
 **********************/
 INSERT INTO Planet (name, star, habitable, logDate, description)
 VALUES
-('Earth', 'Sun', 1, NULL, 'Terrestrial. Complex diversity of ecosystems.'),
-('Aurorus', 'Panthera', 1, '2022-05-14 13:47:08', 'Carbon-rich planet. Mild habitability. Terrestrial.'),
-('Achilles', 'Kadosh', 1, '2023-11-20 10:32:12', 'Desert climate. Low water presence.'),
-('Okéanos', 'Caldrun', 1, '2025-07-07 11:12:13', '85% of surface is water. One exposed landmass.'),
-('Zenith', 'Lux', 0, '2020-02-12 07:43:23', 'Luminous gas giant covered in storms caused by axial rotation speed.'),
-('Lyric', 'Pax', 1, '2022-09-01 09:08:07', 'Rocky super-Earth with iron-rich core and thin atmosphere.'),
-('Kharos', 'Aquila', 0, '2021-03-11 14:23:17', 'Former rogue planet stabilized by gravitational capture.'),
-('Dégron', 'Altair', 1, '2020-12-25 11:14:14', 'Volatile ocean activity caused by two moons.'),
-('Cinbrali', 'Volcanis', 1, '2020-06-30 00:12:45', 'Large amount of tectonic activity. Skies appear pink due to orange star.'),
-('Gihara', 'Edani', 0, '2020-12-25 11:14:14', 'Gas giant. Other features unknown.'),
-('Pelora', 'Androd', 1, '2022-08-09 14:28:37', 'Relatively small. Large polar ice caps and deserts.'),
-('Xyris', 'Kronos', 0, '2023-01-19 16:15:14', 'Majority of landmasses are ice-covered. Volcanic vents sustain hidden ecosystems beneath the surface.'),
-('Tython', 'Celestia', 1, '2021-03-25 20:11:14', 'High-gravity. Dense atmosphere. 30% of surface is water.'),
-('Novara', 'X38', 1, '2022-01-02 23:17:32', 'Earth-like. Bioluminescent flora.'),
-('Zerath', 'Draco', 0, '2021-10-25 16:14:14', 'Gas giant. Strong magnetic field.'),
-('Lumina', 'Vega', 1, '2024-01-01 18:23:57', 'Super-Earth. Extreme temperatures.');
+(N'Earth', N'Sun', 1, NULL, 'Terrestrial. Complex diversity of ecosystems.'),
+(N'Aurorus', N'Panthera', 1, '2022-05-14 13:47:08', 'Carbon-rich planet. Mild habitability. Terrestrial.'),
+(N'Achilles', N'Kadosh', 1, '2023-11-20 10:32:12', 'Desert climate. Low water presence.'),
+(N'Okéanos', N'Caldrun', 1, '2025-07-07 11:12:13', '85% of surface is water. One exposed landmass.'),
+(N'Zenith', N'Lux', 0, '2020-02-12 07:43:23', 'Luminous gas giant covered in storms caused by axial rotation speed.'),
+(N'Lyric', N'Pax', 1, '2022-09-01 09:08:07', 'Rocky super-Earth with iron-rich core and thin atmosphere.'),
+(N'Kharos', N'Aquila', 0, '2021-03-11 14:23:17', 'Former rogue planet stabilized by gravitational capture.'),
+(N'Dégron', N'Altair', 1, '2020-12-25 11:14:14', 'Volatile ocean activity caused by two moons.'),
+(N'Cinbrali', N'Volcanis', 1, '2020-06-30 00:12:45', 'Large amount of tectonic activity. Skies appear pink due to orange star.'),
+(N'Gihara', N'Edani', 0, '2020-12-25 11:14:14', 'Gas giant. Other features unknown.'),
+(N'Pelora', N'Androd', 1, '2022-08-09 14:28:37', 'Relatively small. Large polar ice caps and deserts.'),
+(N'Xyris', N'Kronos', 0, '2023-01-19 16:15:14', 'Majority of landmasses are ice-covered. Volcanic vents sustain hidden ecosystems beneath the surface.'),
+(N'Tython', N'Celestia', 1, '2021-03-25 20:11:14', 'High-gravity. Dense atmosphere. 30% of surface is water.'),
+(N'Novara', N'X38', 1, '2022-01-02 23:17:32', 'Earth-like. Bioluminescent flora.'),
+(N'Zerath', N'Draco', 0, '2021-10-25 16:14:14', 'Gas giant. Strong magnetic field.'),
+(N'Lumina', N'Vega', 1, '2024-01-01 18:23:57', 'Super-Earth. Extreme temperatures.');
+
 
 /*********************
 SHIP
@@ -90,61 +91,61 @@ INDIVIDUAL
 **********************/
 INSERT INTO Individual (biotypeID, homePlanetID, firstName, lastName, earthDOB)
 VALUES
-(1, 1, 'Aurora', 'Sol', '1990-03-11'),
-(3, 3, 'Kina', 'Havok', '1985-09-25'),
-(2, 2, 'Fiova', 'Lahah', NULL),
-(NULL, 1, 'Carek', 'Tusk', '1988-08-14'),
-(4, 4, 'Indaya', 'Phal', '1975-04-20'),
-(3, 3, 'Réxim', 'Torr', NULL),
-(NULL, 6, 'Sira', 'Nyce', '1992-11-22'),
-(6, 7, 'Jericho', 'Nimbus', '1978-01-15'),
-(7, 8, 'Zaría', 'Dune', NULL),
-(8, 9, 'Cruz', 'Quasar', '1983-02-27'),
-(9, 11, 'Vexa', 'Dream', '1999-10-05'),
-(10, 12, 'Gorak', 'Pang', '1990-06-06'),
-(11, 13, 'Lyra', 'Sands', NULL),
-(NULL, 14, 'Orin', 'Bell', '2000-01-01'),
-(13, 15, 'Luma', 'Bright', '1995-07-07'),
-(NULL, 2, 'Heaven', 'Pax', '1993-07-21'),
-(5, 5, 'Simini', 'Korr', '1987-11-12'),
-(NULL, 8, 'Kona', 'Invictus', NULL),
-(12, 12, 'Ryndon', 'Pangi', '1991-03-15'),
-(NULL, 14, 'Lumi', 'Zect', '1994-09-09');
+(1, 1, N'Aurora', N'Sol', '1990-03-11'),
+(3, 3, N'Kina', N'Havok', '1985-09-25'),
+(2, 2, N'Fiova', N'Lahah', NULL),
+(NULL, 1, N'Carek', N'Tusk', '1988-08-14'),
+(4, 4, N'Indaya', N'Phal', '1975-04-20'),
+(3, 3, N'Réxim', N'Torr', NULL),
+(NULL, 6, N'Sira', N'Nyce', '1992-11-22'),
+(6, 7, N'Jericho', N'Nimbus', '1978-01-15'),
+(7, 8, N'Zaría', N'Dune', NULL),
+(8, 9, N'Cruz', N'Quasar', '1983-02-27'),
+(9, 11, N'Vexa', N'Dream', '1999-10-05'),
+(10, 12, N'Gorak', N'Pang', '1990-06-06'),
+(11, 13, N'Lyra', N'Sands', NULL),
+(NULL, 14, N'Orin', N'Bell', '2000-01-01'),
+(13, 15, N'Luma', N'Bright', '1995-07-07'),
+(NULL, 2, N'Heaven', N'Pax', '1993-07-21'),
+(5, 5, N'Simini', N'Korr', '1987-11-12'),
+(NULL, 8, N'Kona', N'Invictus', NULL),
+(12, 12, N'Ryndon', N'Pangi', '1991-03-15'),
+(NULL, 14, N'Lumi', N'Zect', '1994-09-09');
 
 /*********************
 ADDRESS
 **********************/
 INSERT INTO Address (number, street, city, state, nation, planet)
 VALUES
-(42, 'Constellation Blvd', 'Kansas City', 'Missouri', 'USA', 'Earth'),
-(15, 'Twinkle Blvd', 'Veyra', 'High Plains', 'Ekkluvian Union', 'Aurorus'),
-(777, 'Starry Rd', 'Keznar', 'Ashen Ridge', 'Hypherian Clans', 'Achilles'),
-(801, 'Astro Wy', 'Tethys', 'Pelagia', 'Orin', 'Okéanos'),
-(301, 'Stardust Ln', 'Lyricon', 'North Reach', 'Luminaria', 'Lyric'),
-(22, 'Cosmic Cir', 'Tharok City', 'Lowlands', 'Tharok Tribes', 'Kharos'),
-(501, 'Asteroid Dr', 'Sandspire', 'Central Flats', 'Veyran Collective', 'Dégron'),
-(66, 'Galaxy Ridge Dr', 'Moltara', 'South Rims', 'Cindralian Alliance', 'Cinbrali'),
-(123, 'Emerald Ave', 'Pelora Prime', 'Deepwilds', 'Peloran States', 'Pelora'),
-(9, 'Nova St', 'Tyris Hollow', 'Glacier Belt', 'Crucis', 'Xyris'),
-(5, 'Lunar Ln', 'Tython City', 'Desert Zone', 'Mak', 'Tython');
+(42, N'Constellation Blvd', N'Kansas City', N'Missouri', N'USA', N'Earth'),
+(15, N'Twinkle Blvd', N'Veyra', N'High Plains', N'Ekkluvian Union', N'Aurorus'),
+(777, N'Starry Rd', N'Keznar', N'Ashen Ridge', N'Hypherian Clans', N'Achilles'),
+(801, N'Astro Wy', N'Tethys', N'Pelagia', N'Orin', N'Okéanos'),
+(301, N'Stardust Ln', N'Lyricon', N'North Reach', N'Luminaria', N'Lyric'),
+(22, N'Cosmic Cir', N'Tharok City', N'Lowlands', N'Tharok Tribes', N'Kharos'),
+(501, N'Asteroid Dr', N'Sandspire', N'Central Flats', N'Veyran Collective', N'Dégron'),
+(66, N'Galaxy Ridge Dr', N'Moltara', N'South Rims', N'Cindralian Alliance', N'Cinbrali'),
+(123, N'Emerald Ave', N'Pelora Prime', N'Deepwilds', N'Peloran States', N'Pelora'),
+(9, N'Nova St', N'Tyris Hollow', N'Glacier Belt', N'Crucis', N'Xyris'),
+(5, N'Lunar Ln', N'Tython City', N'Desert Zone', N'Mak', N'Tython');
 
 /*********************
 CONTACT
 **********************/
 INSERT INTO Contact (individualID, addressID, emailAddress, phoneNumber)
 VALUES
-(1, 1, 'aurora.sol@earthling.nova', '+1-555-2200'),
-(2, 2, 'havokk@galactic.nova', NULL),
-(3, 3, NULL, '+9-555-8833'),
-(4, 4, 'carek56@galactic.star', '+1-555-1122'),
-(5, 4, 'indaya.phal@polaris.star', NULL),
+(1, 1, N'aurora.sol@earthling.nova', N'+1-555-2200'),
+(2, 2, N'havokk@galactic.nova', NULL),
+(3, 3, NULL, N'+9-555-8833'),
+(4, 4, N'carek56@galactic.star', N'+1-555-1122'),
+(5, 4, N'indaya.phal@polaris.star', NULL),
 (6, 3, NULL, NULL),
-(7, 5, 'nyces@galactic.nova', '+4-555-7766'),
-(8, 6, 'jnimbus@polaris.star', '+5-555-3344'),
-(9, 7, 'zaria.dune@galactic.star', NULL),
-(10, 8, 'quesarc@stellar.nova', '+3-555-5566'),
-(14, 9, 'orin.bell@stellar.nova', '+2-555-1122'),
-(15, 10, 'luma.bright@galactic.star', '+2-555-3344');
+(7, 5, N'nyces@galactic.nova', N'+4-555-7766'),
+(8, 6, N'jnimbus@polaris.star', N'+5-555-3344'),
+(9, 7, N'zaria.dune@galactic.star', NULL),
+(10, 8, N'quesarc@stellar.nova', N'+3-555-5566'),
+(14, 9, N'orin.bell@stellar.nova', N'+2-555-1122'),
+(15, 10, N'luma.bright@galactic.star', N'+2-555-3344');
 
 /*********************
 EVALUATION
@@ -258,6 +259,7 @@ VALUES
 (1, 9, 3, 3, '2023-09-01', '2025-03-13'),
 (14, 14, 2, 2, '2023-04-20', NULL),
 (15, 14, 3, 5, '2023-11-05', NULL);
+
 
 
 
